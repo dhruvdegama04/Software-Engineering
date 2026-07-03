@@ -1,47 +1,14 @@
-1. Name 5 IT job roles and write one line about what each role does.
-IT Job Role			Responsibility
-Software Developer		Designs and develops software applications.
-Web Developer			Creates and maintains websites and web applications.
-Software Tester (QA Engineer)	Tests software to find bugs and ensure quality.
-Database Administrator (DBA)	Manages and maintains databases securely and efficiently.
-System Administrator		Manages computer systems, servers, and networks.
+Q1.Write the full form and one-line use of: HTTP, HTTPS, FTP, SMTP.
 
-2. List 3 product companies and 3 service companies with one example of work each does.
+-->HTTP (Hypertext Transfer Protocol): Used to transmit web pages and data over the internet between a web browser and a server.
 
-Product Companies
+-->HTTPS (Hypertext Transfer Protocol Secure): An encrypted version of HTTP used to securely transfer sensitive data over the internet.
 
-Company		Example of Work
-Microsoft	Develops the Windows operating system and Microsoft Office.
-Google		Develops products like Google Search and Android.
-Adobe	Creates software such as Photoshop and Acrobat.
+--.FTP (File Transfer Protocol): Used specifically for transferring files between a client and a server over a network.
 
-Service Companies
+--.SMTP (Simple Mail Transfer Protocol): Used by email clients and servers to send and route outgoing emails.
 
-Company					Example of Work
-TCS (Tata Consultancy Services)		Provides software development and IT consulting services.
-Infosys					Offers application development and digital transformation services.
-Wipro					Provides cloud, cybersecurity, and IT support services.
-
-3. Write the full forms and one-line use of: GitHub, Slack, Jira, IDE, API.
-
-Term	Full Form				Use
-GitHub	Git Hosting Service (based on Git)	Used to store, manage, and collaborate on source code.
-Slack	Slack (not an acronym)			Used for team communication and collaboration.
-Jira	Jira (not an acronym)			Used to track tasks, bugs, and software projects.
-IDE	Integrated Development Environment	Used to write, edit, run, and debug code.
-API	Application Programming Interface	Allows different software applications to communicate with each 						other.
-
-4. Name any 5 programming languages and mention one popular use case for each.
-
-Programming Language		Popular Use Case
-Python				Data science and AI development
-Java				Enterprise and Android applications
-C				Operating systems and embedded systems
-C++				Game development and high-performance applications
-JavaScript			Interactive websites and web applications
-
-5. What is the difference between a developer and a tester? (2 lines)
-
-Developer: Writes and maintains software code to build applications.
-
-Tester (QA Engineer): Tests the software for bugs and ensures it works correctly before release.
+Q2.What is the difference between IPv4 and IPv6? Answer in 2 lines.
+Q3.Run nslookup google.com on your system and write down the IP address you get.
+Q4.What do these HTTP status codes mean: 200, 301, 404, 500, 403?
+Q5.Explain DNS hierarchy (root, TLD, domain, subdomain) with www.google.com as an example.
