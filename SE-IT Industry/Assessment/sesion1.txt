@@ -1,14 +1,53 @@
-Q1.Write the full form and one-line use of: HTTP, HTTPS, FTP, SMTP.
+Q1.Name 5 IT job roles and write one line about what each role does.
+-->Software Developer: Designs, builds, and maintains software applications and systems.
 
--->HTTP (Hypertext Transfer Protocol): Used to transmit web pages and data over the internet between a web browser and a server.
+-->QA Tester: Evaluates software to find bugs, ensure quality, and verify it meets requirements.
 
--->HTTPS (Hypertext Transfer Protocol Secure): An encrypted version of HTTP used to securely transfer sensitive data over the internet.
+-->Data Analyst: Examines raw data to extract meaningful insights and help businesses make informed decisions.
 
---.FTP (File Transfer Protocol): Used specifically for transferring files between a client and a server over a network.
+-->DevOps Engineer: Bridges the gap between development and operations to automate and streamline software deployment.
 
---.SMTP (Simple Mail Transfer Protocol): Used by email clients and servers to send and route outgoing emails.
+-->UI/UX Designer: Focuses on the look, feel, and user experience of a digital product to make it intuitive and visually appealing.
 
-Q2.What is the difference between IPv4 and IPv6? Answer in 2 lines.
-Q3.Run nslookup google.com on your system and write down the IP address you get.
-Q4.What do these HTTP status codes mean: 200, 301, 404, 500, 403?
-Q5.Explain DNS hierarchy (root, TLD, domain, subdomain) with www.google.com as an example.
+Q2.List 3 product companies and 3 service companies with one example of work each does.
+
+-->Google: Develops and maintains its own proprietary software products, like Google Search and Android.
+
+-->Microsoft: Creates and sells consumer software and hardware ecosystems, such as the Windows Operating System and Office suite.
+
+-->Adobe: Builds creative software platforms, like Photoshop and Premiere Pro, offered as subscription products.
+
+**Service Companies
+-->TCS (Tata Consultancy Services): Provides custom software development, IT consulting, and business solutions to external clients.
+
+-->Infosys: Offers digital transformation, cloud migration, and outsourced engineering maintenance services to global businesses.
+
+-->Cognizant: Helps client enterprises build, modernize, and manage their technology infrastructure and applications.
+
+Q3.Write the full forms and one-line use of: GitHub, Slack, Jira, IDE, API.
+-->GitHub: No official full form (Git + Hub) | Used to host, manage, and track versions of software code using Git.
+
+--.Slack: Searchable Log of All Conversations and Knowledge | Used as a team collaboration tool for instant messaging and workplace communication.
+
+-->Jira: Derived from "Gojira" (Japanese for Godzilla) | Used for project management, issue tracking, and managing Agile software development workflows.
+
+-->IDE: Integrated Development Environment | Used by developers as a comprehensive software suite containing a code editor, debugger, and build automation tools.
+
+-->API: Application Programming Interface | Used to allow two different software applications to communicate and exchange data with each other.
+
+Q4.Name any 5 programming languages and mention one popular use case for each.
+
+-->Python: Widely used for Data Science, Machine Learning, and backend web development.
+
+-->JavaScript: Primarily used to create interactive and dynamic elements on front-end web pages.
+
+--.Java: Popularly used for building large-scale enterprise applications and Android mobile apps.
+
+-->C++: Common in game development, embedded systems, and high-performance applications due to its speed.
+
+-->SQL: Used explicitly for managing, querying, and manipulating relational databases.
+
+Q5.What is the difference between a developer and a tester? Answer in 2 lines.
+
+-->A developer is responsible for writing code to build, create, and implement new software features based on requirements.
+A tester focuses on systematically breaking, reviewing, and evaluating that software to identify bugs and ensure it meets quality standards before release.
