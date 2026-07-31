@@ -1,0 +1,23 @@
+1. Methodology Selection Guide
+MethodologyBest 	Suited For...				Key Strengths
+
+Agile / Scrum		Projects with evolving requirements,	High flexibility, continuous feedback, 
+			high customer collaboration, and 	early value delivery.
+			iterative release goals.					
+			
+Waterfall		Projects with fixed, fully defined 	Clear milestones, well-documented phases, 				requirements, strict compliance/	predictable budget/timeline up front.
+			regulatory needs, or predictable 
+			scope.					
+			
+Kanban			Continuous delivery workflows, 		Flexible prioritizing, limits work-in-progress 
+			maintenance/support projects, or 	(WIP), smooth flow.
+			steady feature requests.					
+			
+2. Two Risks of Choosing the Wrong Methodology
+Massive Rework and Sunk Costs (Using Waterfall for Uncertain Scope):
+
+If a team chooses Waterfall for a project with changing user needs or unclear requirements, they risk spending months building according to initial assumptions. When testing or client review happens late in the cycle, required changes can force extensive, costly architectural redesigns.
+
+Scope Creep and Budget Overruns (Using Agile for Fixed-Price/Regulated Work):
+
+If a team uses Agile on a strict fixed-bid or highly regulated project (e.g., medical software or aviation), constant iteration without strict baseline controls can lead to unapproved feature bloat, delayed compliance validation, and missed non-negotiable hard deadlines.

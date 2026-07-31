@@ -3,18 +3,17 @@
 #include <stdio.h>
 
 int main() {
-    // 1. Initialize an array of 5 order amounts (using float for currency)
-    float orders[5] = {249.50, 580.00, 120.25, 899.90, 450.00};
     
-    // 2. Declare a pointer pointing to the first element of the array
-    float *ptr = orders; // Equivalent to: float *ptr = &orders[0];
+    float orders[5] = {249.50, 580.00, 120.25, 899.90, 450.00};
+    int i;
+    
+    float *ptr = orders;
     
     printf("--- Zomato Order Details ---\n\n");
     
-    // 3. Iterate through the array using pointer arithmetic
-    for (int i = 0; i < 5; i++) {
-        // *(ptr + i) accesses the value at the current index
-        // (ptr + i) gives the exact memory address of that index
+    for ( i = 0; i < 5; i++) 
+	{
+        
         printf("Order %d: Amount = %.2f | Memory Address = %p\n", i + 1, *(ptr + i), (void*)(ptr + i));
     }
     

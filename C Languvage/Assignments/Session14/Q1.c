@@ -4,23 +4,23 @@
 #include <stdio.h>
 
 int main() {
-    // Array of menu items (array of string literals)
+    
     char *items[] = {"Burger", "Pizza", "Fries"};
     
-    // Array of prices corresponding to the items
+   
     int prices[] = {120, 250, 90};
     
-    // Calculate the total number of elements in the array
+   
     int length = sizeof(prices) / sizeof(prices[0]);
     
     int total = 0;
 
-    // Fixed: Declared 'i' as an integer and corrected '=+' to '+='
+    
     for (int i = 0; i < length; i++) {
         total += prices[i];
     }
 
-    // Print the final accumulated total
+   
     printf("Total price is: %d\n", total);
 
     return 0;

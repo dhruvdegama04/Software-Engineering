@@ -2,15 +2,15 @@
 
 #include <stdio.h>
 
-// Function to swap the song counts using pointers
+
 void swapPlaylistCounts(int *a, int *b) {
-    int temp = *a; // Store the value pointed to by a in a temporary variable
-    *a = *b;       // Assign the value pointed to by b to the address held by a
-    *b = temp;     // Assign the temporary value to the address held by b
+    int temp = *a; 
+    *a = *b;       
+    *b = temp;     
 }
 
 int main() {
-    // Initialize the song counts for two Spotify playlists
+
     int playlist1 = 45;
     int playlist2 = 82;
 
@@ -18,7 +18,7 @@ int main() {
     printf("Playlist 1 song count: %d\n", playlist1);
     printf("Playlist 2 song count: %d\n", playlist2);
 
-    // Call the function by passing the addresses of the variables
+    
     swapPlaylistCounts(&playlist1, &playlist2);
 
     printf("\n--- After Swapping ---\n");

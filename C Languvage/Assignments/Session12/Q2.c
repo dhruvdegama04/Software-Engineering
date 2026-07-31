@@ -2,7 +2,7 @@
 
 #include <stdio.h>
 
-// Define the structure to store Zomato-style menu data
+
 struct FoodItem {
     char itemName[100];
     float price;
@@ -10,7 +10,7 @@ struct FoodItem {
 };
 
 int main() {
-    // Initialize an array of 3 FoodItem variables
+    
     struct FoodItem menu[3] = {
         {"Paneer Butter Masala", 280.50, 4.5},
         {"Chicken Biryani", 320.00, 4.7},
@@ -19,7 +19,6 @@ int main() {
 
     printf("--- Zomato Menu Data ---\n");
     
-    // Display the details using a loop
     for (int i = 0; i < 3; i++) {
         printf("Item %d:\n", i + 1);
         printf("  Name   : %s\n", menu[i].itemName);

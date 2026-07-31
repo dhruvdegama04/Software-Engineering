@@ -1,0 +1,28 @@
+//Question: Explain why an array is the correct data structure for this task compared to using 30
+separate variables. Describe the two-step logic your program would follow: first to compute the
+average, then to identify the above-average days — and explain why both steps cannot be done
+in a single loop.
+
+Why an Array is Better Than 30 Separate Variables
+Using an array (or list) instead of 30 distinct variables (e.g., temp1, temp2, ..., temp30) is far more efficient and maintainable for several key reasons:
+
+Code Scalability & Cleanliness: Declaring 30 separate variables leads to bloated, repetitive code. An array compresses 30 individual references into a single, indexed collection.
+
+Iterative Processing: Arrays allow you to process data dynamically using loops (for or while). With individual variables, you would have to write 30 manual addition statements and 30 separate if conditions.
+
+Flexibility: If the dataset grows from 30 days to 365 days, an array-based program requires changing a single loop boundary or using the array's length property. Variable-based code would require declaring 335 new variables and rewriting all processing logic.
+
+Two-Step Algorithm LogicStep 
+1: Compute the Average
+	--Iterate through the array to calculate the sum of all elements.
+	--Divide the total sum by the total number of elements ($N = 30$) to calculate the average value.Step 
+
+2: Identify Above-Average Days
+	--Iterate through the array a second time.
+	--Compare each individual element against the pre-calculated average value from Step 1.
+	--Output or log any index/value where the daily value is strictly greater than the average.
+
+Why Both Steps Cannot Be Done in a Single Loop
+You cannot determine which days are above average in a single pass through the array because of a fundamental logical dependency:
+
+The threshold (the average) is unknown until the entire dataset has been processed.

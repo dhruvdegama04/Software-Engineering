@@ -1,0 +1,32 @@
+//Question: Describe the Git workflow your team should adopt to prevent this from happening
+again. Name at least two Git commands your team should use as part of this workflow and
+explain the role of each command.
+Recommended Workflow: Feature Branch Workflow
+In this workflow, the primary branch (main or master) is protected, meaning no developer can commit directly to it.
+
+Key Steps:
+Isolated Development: Every new feature, bug fix, or task is developed on its own dedicated branch created off main.
+
+Local Testing: Developers write code and test their changes locally on their feature branch.
+
+Pull Request (PR) & Code Review: Once ready, the developer pushes the branch to the remote repository and opens a Pull Request.
+
+Automated Checks (CI/CD): Automated tests and linters run automatically on the PR to ensure the build doesn't break.
+
+Peer Review & Merge: At least one peer reviews and approves the PR before it is merged into main.
+
+Essential Git Commands for This Workflow
+1. git checkout -b <branch-name> (or git switch -c <branch-name>)
+Role: Branch Creation and Context Switching
+
+Explanation: Creates a new feature branch isolated from main and immediately switches your workspace to it. This ensures all new commits are isolated, preventing accidental modifications to the main codebase.
+
+2. git pull --rebase origin main (or git merge main)
+Role: Upstream Synchronization & Conflict Resolution
+
+Explanation: Fetches the latest updates from the remote main branch and integrates them into your feature branch before submitting a Pull Request. This allows developers to resolve any merge conflicts locally on their feature branch rather than breaking the shared main branch.
+
+3. git push -u origin <branch-name>
+Role: Publishing and Tracking Remote Branches
+
+Explanation: Uploads the local feature branch to the central repository and sets up tracking (-u). This makes the branch available remotely so teammates can review the code and open a Pull Request.

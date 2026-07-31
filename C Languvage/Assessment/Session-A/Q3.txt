@@ -1,0 +1,51 @@
+//Question: List the appropriate HTML input types you would use for each of the five fields. Explain
+how you would use HTML5 built-in validation attributes to enforce the two constraints mentioned,
+and why these attributes alone are not sufficient for production-level validation.
+
+Field			Recommended type		Reason
+Email Address		"type=""email"			Triggers native browser email syntax checking 
+							and optimized mobile keypads (with @ and .com).
+
+Password		"type=""password"		Masks input characters for privacy and security.
+
+Age / Quantity		"type=""number"			Restricts input to numeric values and provides 
+							step controls (arrows).
+
+Date of Birth		"type=""date"			Opens a native date-picker UI consistent with the OS/browser.
+
+Phone / Website		"type=""tel"" or type=""url"	Displays optimized phone/URL keypads on mobile devices and enables 
+							appropriate URI formatting rules.
+
+2. Enforcing Constraints with HTML5 Built-in Validation Attributes
+Here is how you enforce common constraints (e.g., Mandatory Entry and Specific Format / Length) directly in markup:
+
+Constraint 1: Required / Non-empty Fields (required)
+
+Usage: Adding the boolean required attribute prevents form submission if the field is blank.
+
+Example: <input type="text" name="username" required>
+
+Constraint 2: Pattern / Value Bounds (pattern, min, max, minlength, maxlength)
+
+Usage: Use min and max for numeric/date constraints, or pattern with a Regular Expression (RegEx) to enforce specific formats (e.g., password strength or custom ID formats).
+
+Example (Password length & format): <input type="password" name="password" minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+
+3. Why HTML5 Attributes Alone Are Insufficient for Production
+While HTML5 validation provides immediate feedback to users, relying on it exclusively in production creates major security and reliability vulnerabilities:
+
+Client-Side Bypass (Security Risk):
+
+HTML5 validation runs entirely in the browser. Anyone can open Browser Developer Tools (F12) to remove attributes like required or pattern from the DOM, or send raw HTTP requests (via cURL, Postman, or scripts) directly to your server, completely skipping HTML validation.
+
+No Access to Server-Side State / Business Logic:
+
+HTML5 cannot validate database-dependent logic—such as checking whether an email address is already registered, verifying account balances, or validating single-use discount codes.
+
+Browser Inconsistencies:
+
+Older browsers or non-standard user agents may ignore HTML5 validation attributes completely, allowing invalid data to pass through.
+
+Data Integrity & Security:
+
+Without server-side validation and sanitization, your backend remains vulnerable to SQL Injection, Cross-Site Scripting (XSS), and corrupted database entries.

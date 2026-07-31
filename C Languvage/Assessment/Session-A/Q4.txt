@@ -1,0 +1,42 @@
+//Question: Explain how Bootstrap's grid class system works to produce this responsive layout.
+Write the Bootstrap class combination you would apply to the article column div, and explain
+what each class in the combination controls.
+
+1. How Bootstrap's Grid Class System Works
+12-Column Layout: Bootstrap divides each row into 12 virtual vertical columns.
+
+Mobile-First Breakpoints: Grid classes use breakpoint abbreviations based on screen width:
+
+xs (<576px) – Extra small / phones (default)
+
+sm (≥576px) – Small / landscape phones
+
+md (≥768px) – Medium / tablets
+
+lg (≥992px) – Large / desktops
+
+xl (≥1200px) – Extra large / widescreen
+
+xxl (≥1400px) – Ultra large screens
+
+Inheritance: Breakpoint classes apply to that screen size and everything larger unless overridden by a larger breakpoint class.
+
+2. Typical Bootstrap Class Combination for an Article Column
+A standard responsive layout for an article column (e.g., full width on mobile, 8 out of 12 columns on medium screens and above) uses this combination:
+**--HTML--**
+<div class="col-12 col-md-8">
+  <!-- Article Content Here -->
+</div>
+
+3. Explanation of Each Class in the Combination
+--col-12
+
+Controls: Base / Extra-Small Screen Width (Mobile-First)
+
+Role: Sets the width of the div to 12 out of 12 columns (100% width) on mobile devices and narrow screens (<768px). This ensures the main article stacks vertically above or below sidebars for easy reading on phones.
+
+--col-md-8
+
+Controls: Medium Screens and Above (Tablets, Laptops, Desktops)
+
+Role: At the md breakpoint (≥768px) and larger, this overrides col-12 and sets the article width to 8 out of 12 columns (66.66% width). This leaves the remaining 4 columns available for a sidebar (col-md-4) next to the article on wider screens.
