@@ -29,23 +29,23 @@ int main()
 
     if (per >= 90)
     {
-        printf("A — Grade \n");
+        printf("A Grade \n");
     }
     else if (per >= 75)
     {
-        printf("B — Grade \n");
+        printf("B Grade \n");
     }
     else if (per >= 60)
     {
-        printf("C — Grade \n");
+        printf("C Grade \n");
     }
     else if (per >= 45)
     {
-        printf("D — Grade \n");
+        printf("D Grade \n");
     }
     else
     {
-        printf("F — Grade \n");
+        printf("F Grade \n");
     }
 
     return 0;

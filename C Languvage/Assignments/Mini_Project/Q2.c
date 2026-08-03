@@ -12,9 +12,9 @@ int main() {
     do {
         // Display Menu
         printf("\n--- Music Listening Logger ---\n");
-        printf("1. Log listening minutes for 7 days\n");
-        printf("2. View weekly summary\n");
-        printf("3. Exit\n");
+        printf("1. listening minutes for 7 days\n");
+        printf("2. Show weekly summary\n");
+        printf("3. Exit This Code\n\n");
         printf("Enter your choice (1-3): ");
         scanf("%d", &choice);
 

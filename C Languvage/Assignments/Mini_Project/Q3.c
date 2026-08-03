@@ -3,67 +3,98 @@
 
  #include <stdio.h>
 
+void log_minutes() 
+{
+    int minutes;
+
+    printf("\nEnter listening minutes for today: ");
+    if (scanf("%d", &minutes) != 1 || minutes < 0) 
+    {
+        printf("Invalid input! Please enter a valid positive number.\n");
+        // Clear invalid input from memory buffer
+        while (getchar() != '\n'); 
+        return;
+    }
+
+    // "a" mode appends new data to the end of music_log.txt
+    FILE *file = fopen("music_log.txt", "a");
+
+    if (file == NULL) 
+    {
+        printf("Error: Unable to open or create music_log.txt!\n");
+        return;
+    }
+
+    // Save minutes to file
+    fprintf(file, "Logged Minutes: %d\n", minutes);
+
+    // Save and close
+    fclose(file);
+
+    printf("--> Saved %d minutes to music_log.txt successfully!\n", minutes);
+}
+
+void view_logs() 
+{
+    char ch;
+    
+    // "r" mode opens file for reading
+    FILE *file = fopen("music_log.txt", "r");
+
+    if (file == NULL) 
+    {
+        printf("\nNo saved logs found yet. Try logging some minutes first!\n");
+        return;
+    }
+
+    printf("\n--- YOUR SAVED MUSIC LOGS ---\n");
+    
+    // Read character by character until End-Of-File (EOF)
+    while ((ch = fgetc(file)) != EOF) 
+    {
+        putchar(ch);
+    }
+    
+    printf("-----------------------------\n");
+
+    fclose(file);
+}
+
 int main() {
-    int minutes[7] = {0}; // Stores minutes for 7 days
     int choice;
-    int total;
-    FILE *file; // Pointer for file handling
 
-    do {
-        // Display Menu
-        printf("\n--- Music Listening Logger ---\n");
-        printf("1. Log listening minutes for 7 days (Saves to File)\n");
-        printf("2. View weekly summary\n");
+    while (1) 
+    {
+        printf("\n=== MUSIC LISTENING LOGGER ===\n");
+        printf("1. Log Daily Listening Minutes\n");
+        printf("2. View Log History\n");
         printf("3. Exit\n");
-        printf("Enter your choice (1-3): ");
-        scanf("%d", &choice);
+        printf("Choose an option (1-3): ");
 
-        switch (choice) {
-            case 1:
-                printf("\n--- Enter Listening Minutes ---\n");
-                
-                // Open file in write mode ("w")
-                file = fopen("music_log.txt", "w");
-
-                if (file == NULL) {
-                    printf("Error opening file!\n");
-                    break;
-                }
-
-                // Input minutes for each day and write to file
-                for (int i = 0; i < 7; i++) {
-                    printf("Enter minutes for Day %d: ", i + 1);
-                    scanf("%d", &minutes[i]);
-                    
-                    // Save to the file
-                    fprintf(file, "Day %d: %d minutes\n", i + 1, minutes[i]);
-                }
-
-                // Close the file after saving
-                fclose(file);
-                printf("\nData successfully recorded and saved to 'music_log.txt'!\n");
-                break;
-
-            case 2:
-                // Display weekly summary from memory
-                total = 0;
-                printf("\n--- Weekly Summary ---\n");
-                for (int i = 0; i < 7; i++) {
-                    printf("Day %d: %d minutes\n", i + 1, minutes[i]);
-                    total += minutes[i];
-                }
-                printf("Total time listened: %d minutes\n", total);
-                break;
-
-            case 3:
-                printf("\nExiting the app. Goodbye!\n");
-                break;
-
-            default:
-                printf("\nInvalid choice! Please enter 1, 2, or 3.\n");
+        if (scanf("%d", &choice) != 1) 
+        {
+            printf("Invalid choice! Enter a number between 1 and 3.\n");
+            while (getchar() != '\n'); 
+            continue;
         }
 
-    } while (choice != 3);
+        if (choice == 1) {
+            log_minutes();
+        } 
+        else if (choice == 2)
+        {
+            view_logs();
+        }
+         else if (choice == 3) 
+        {
+            printf("Exiting Logger. Happy listening!\n");
+            break;
+        } 
+        else 
+        {
+            printf("Invalid choice! Please select 1, 2, or 3.\n");
+        }
+    }
 
     return 0;
 }

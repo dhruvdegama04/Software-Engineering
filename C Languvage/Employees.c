@@ -1,70 +1,95 @@
-#include<stdio.h>
-#include<string.h>
-#include<stdlib.h>
+#include <stdio.h>
 
-struct employee{
-	int id;
-	char Name[50];
-	int contact;
-	char department[50];
-}a;
-	void funuser()
-	{
-		FILE* fptr;
-	
-		fptr = fopen("Employee.txt","w");
+struct Employee {
+    int id;
+    char name[50];
+    char contact[20];
+    char department[50];
+};
 
-		printf("Enter Your ID = ");
-		scanf("%d\n",&a.id);
-		
-		printf("Enter Your Name = ");
-		scanf("%s\n",&a.Name);
-		
-		printf("Enter Your Contact = ");
-		scanf("%d\n",&a.contact);
-		
-		printf("Enter Your Department = ");
-		scanf("%s\n",&a.department);
-		
-		fclose(fptr);
-	}
-	
-	void data()
-	{
-		printf("id %d",a.id);
-		printf("Name %s",a.Name);
-		printf("Contact %d",a.contact);
-		printf("Department %s",a.department);
-	}
+void addEmployee() {
+    struct Employee e;
+    
+    FILE *file = fopen("employee.txt", "a");
 
-	void Showempdata()
-	{
-		FILE* fptr;
-	
-		fptr = fopen("Employee.txt","r");
-	
-		if(fptr == NULL)
-		{
-			printf("The file is not Found");
-			return 0;
-		}
-		else
-		{
-        printf("The file is now opened.\n");
-
-        while (fgets(fptr,) != NULL)
-        {
-
-            // Print the data
-            printf("%s", data);
-        }
-        fclose(fptr);
+    if (file == NULL) {
+        printf("Error opening file!\n");
+        return;
     }
+
+    printf("\n--- Enter Employee Details ---\n\n");
+    printf("Enter ID : ");
+    scanf("%d", &e.id);
+
+    printf("Enter Name : ");
+    scanf("%s", e.name);
+
+    printf("Enter Contact : ");
+    scanf("%s", e.contact);
+
+    printf("Enter Department : ");
+    scanf("%s", e.department);
+
+    fprintf(file, "%d %s %s %s\n", e.id, e.name, e.contact, e.department);
+    
+    fclose(file);
+    printf("\n--> Data saved successfully!\n");
 }
-int main()
-{
-	funuser();
-	data();
-	Showempdata();
-	return 0;
+
+void displayEmployees() {
+    struct Employee e;
+
+    FILE *file = fopen("employee.txt", "r");
+
+    if (file == NULL) {
+        printf("\nNo data found or file does not exist!\n");
+        return;
+    }
+
+    printf("\n=====================================\n");
+    printf("          EMPLOYEE RECORDS           \n");
+    printf("=====================================\n");
+
+    while (fscanf(file, "%d %s %s %s", &e.id, e.name, e.contact, e.department) != EOF) {
+        printf("ID         : %d\n", e.id);
+        printf("Name       : %s\n", e.name);
+        printf("Contact    : %s\n", e.contact);
+        printf("Department : %s\n", e.department);
+        printf("-------------------------------------\n");
+    }
+
+    fclose(file);
+}
+
+int main() {
+    int choice;
+
+    while (1) {
+        printf("\n--- Menu ---\n\n");
+        printf("1. Add Employee\n");
+        printf("2. Display All Employees\n");
+        printf("3. Exit\n");
+        printf("Enter choice (1-3): ");
+        scanf("%d", &choice);
+
+        if (choice == 1) 
+        {
+            addEmployee();
+        }
+        else if (choice == 2) 
+        {
+            displayEmployees();
+        } 
+        else if (choice == 3) 
+        {
+            printf("Save Or 2Exit program.\n");
+            break;
+        } 
+        else 
+        {
+            printf("Invalid choice! Try again.\n");
+        }
+    }
+
+    return 0;
 }

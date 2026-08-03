@@ -13,7 +13,7 @@ int main() {
     for ( i = 0; i < 5; i++) {
         // Inner loop for the 5 columns
         for ( j = 0; j < 5; j++) {
-            printf("📷 ");
+            printf("* ");
         }
         // Print a newline after each row is complete
         printf("\n");

@@ -34,12 +34,12 @@ int main() {
 
     average = total / 7.0;
 
-    printf("\n=== PERFORMANCE SUMMARY ===\n");
+    printf("\n=== PERFORMANCE SUMMARY ===\n\n");
     printf("Total Study Hours: %.2f hours\n", total);
     printf("Daily Average: %.2f hours\n", average);
     printf("Most Studied Day: Day %d (%.2f hours)\n", max_day + 1, hours[max_day]);
     
-    printf("\n=== DAILY STUDY CHART ===\n");
+    printf("\n=== DAILY STUDY CHART ===\n\n");
     for ( i = 0; i < 7; i++) {
         printf("Day %d: ", i + 1);
         
