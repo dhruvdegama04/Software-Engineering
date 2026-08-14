@@ -4,10 +4,12 @@ instead of separate arguments. Update your instantiation code to use this new co
 #include <iostream>
 #include <string>
 
+using namespace std;
+
 struct OrderDetails 
 {
     int orderId;
-    std::string restaurantName;
+    string restaurantName;
     bool isDelivered;
 };
 
@@ -15,7 +17,7 @@ class FoodOrder
 {
     public:
         int orderId;
-        std::string restaurantName;
+        string restaurantName;
         bool isDelivered;
 
     FoodOrder(OrderDetails details) 
@@ -27,9 +29,9 @@ class FoodOrder
 
     void displayOrder()
     {
-        std::cout << "Order ID: " << orderId << std::endl;
-        std::cout << "Restaurant: " << restaurantName << std::endl;
-        std::cout << "Status: " << (isDelivered ? "Delivered" : "Pending") << std::endl;
+        cout << "Order ID: " << orderId << endl;
+        cout << "Restaurant: " << restaurantName <<endl;
+        cout << "Status: " << (isDelivered ? "Delivered" : "Pending") <<endl;
     }
 };
 

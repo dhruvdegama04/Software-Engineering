@@ -5,14 +5,16 @@ methods. Demonstrate adding 3 tasks, marking one as done, and displaying all tas
 #include <vector>
 #include <string>
 
+using namespace std;
+
 class Task 
 {
     private:
-        std::string title;
+        string title;
         bool isDone;
 
     public:
-        Task(std::string taskTitle) 
+        Task(string taskTitle) 
         {
             title = taskTitle;
             isDone = false;
@@ -25,17 +27,17 @@ class Task
 
     void display() 
     {
-        std::cout << "Status: [" << (isDone ? "Done" : "Pending") << "] " << title;
+        cout << "Status: [" << (isDone ? "Done" : "Pending") << "] " << title;
     }
 };
 
 class TaskList 
 {
 private:
-    std::vector<Task> tasks; 
+    vector<Task> tasks; 
 
 public:
-    // Adds a new Task object to the list
+    
     void addTask(std::string title) 
     {
         tasks.push_back(Task(title));
@@ -49,7 +51,7 @@ public:
         } 
         else 
         {
-            std::cout << "Invalid task index!" << std::endl;
+            cout << "Invalid task index!" << endl;
         }
     }
 
@@ -57,16 +59,16 @@ public:
     {
         if (tasks.empty()) 
         {
-            std::cout << "No tasks available." << std::endl;
+            cout << "No tasks available." << endl;
             return;
         }
 
-        std::cout << "--- Your Task List ---" << std::endl;
+        cout << "--- Your Task List ---" << endl;
         for (size_t i = 0; i < tasks.size(); ++i) 
         {
-            std::cout << i << ". ";
+            cout << i << ". ";
             tasks[i].display();
-            std::cout << std::endl;
+            cout << std::endl;
         }
     }
 };

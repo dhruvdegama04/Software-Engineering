@@ -4,11 +4,13 @@
 #include <iostream>
 #include <string>
 
+using namespace std;
+
 class Playlist 
 {
     public:
-        std::string name;
-        std::string createdOn;
+        string name;
+        string createdOn;
         bool isPublic;
 
     Playlist(std::string playlistName, std::string dateCreated, bool publicStatus) 
@@ -16,10 +18,10 @@ class Playlist
 
     void displayInfo() const 
     {
-        std::cout << "--- Playlist Information ---" << std::endl;
-        std::cout << "Name          :   " << name << std::endl;
-        std::cout << "Created On    :   " << createdOn << std::endl;
-        std::cout << "Visibility    :   " << (isPublic ? "Public" : "Private") << std::endl;
+        cout << "--- Playlist Information ---" << endl;
+        cout << "Name          :   " << name << endl;
+        cout << "Created On    :   " << createdOn << endl;
+        cout << "Visibility    :   " << (isPublic ? "Public" : "Private") << endl;
     }
 };
 

@@ -6,26 +6,28 @@ empty array inside the constructor.</em>*/
 #include <vector>
 #include <string>
 
+using namespace std;
+
 class Playlist 
 {
     public:
-        std::vector<std::string> songs;
+        vector<string> songs;
 
     Playlist() 
     {
         songs = {};
     }
 
-    void addSong(std::string songTitle) 
+    void addSong(string songTitle) 
     {
         songs.push_back(songTitle);
     }
 
     void displaySongs() 
     {
-        for (const std::string& song : songs) 
+        for (const string& song : songs) 
         {
-            std::cout << song << std::endl;
+            cout << song <<endl;
         }
     }
 };

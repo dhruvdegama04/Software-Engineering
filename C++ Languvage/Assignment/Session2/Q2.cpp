@@ -4,14 +4,16 @@ Demonstrate by toggling the value twice and printing the result each time.*/
 #include <iostream>
 #include <string>
 
+using namespace std;
+
 class Playlist 
 {
     private:
-        std::string name;
+        string name;
         bool isPublic;
 
     public:
-        Playlist(std::string playlistName, bool initialPublicStatus = false) 
+        Playlist(string playlistName, bool initialPublicStatus = false) 
             : name(playlistName), isPublic(initialPublicStatus) {}
 
     void togglePublic() 
@@ -26,8 +28,8 @@ class Playlist
 
     void printStatus() const 
     {
-        std::cout << "Playlist '" << name << "' is currently: " 
-                  << (isPublic ? "Public" : "Private") << std::endl;
+        cout << "Playlist '" << name << "' is currently: " 
+                  << (isPublic ? "Public" : "Private") <<endl;
     }
 };
 
@@ -37,11 +39,11 @@ int main()
     myPlaylist.printStatus();
 
     myPlaylist.togglePublic();
-    std::cout << "\n[Toggled Once]" << std::endl;
+    cout << "\n[Toggled Once]" <<endl;
     myPlaylist.printStatus();
 
     myPlaylist.togglePublic();
-    std::cout << "\n[Toggled Twice]" << std::endl;
+    cout << "\n[Toggled Twice]" <<endl;
     myPlaylist.printStatus();
 
     return 0;

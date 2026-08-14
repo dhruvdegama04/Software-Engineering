@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <script>
+    function saveName() {
+      let name = document.getElementById("username").value;
+
+      localStorage.setItem("username", name);
+
+      alert("Name Saved!");
+    }
+    function getLocation() {
+      navigator.geolocation.getCurrentPosition(function (position) {
+        alert(
+          "Latitude: " +
+          position.coords.latitude +
+          "\nLongitude: " +
+          position.coords.longitude,
+        );
+      });
+    }
+  </script>
+</head>
+
+<body>
+  <input type="text" id="username" placeholder="Enter Name" />
+  <button onclick="saveName()">Save</button>
+  <br />
+  <button onclick="getLocation()">Get My Location</button>
+  <br />
+
+  <video controls autoplay muted loop style="height: 500px; width: 50%">
+    <source src="video.mp4" type="video/mp4" />
+  </video>
+  <audio controls loop>
+    <source src="audio.mp3" type="audio/mpeg" />
+  </audio>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/BHTqeB8Ukio?si=bUEPoyHJ9HZky44s"
+    title="YouTube video player" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</body>
+
+</html>

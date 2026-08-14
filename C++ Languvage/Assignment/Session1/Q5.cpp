@@ -4,15 +4,17 @@ classes and methods in the OOP version.*/
 #include <string>
 #include <vector>
 
+using namespace std;
+
 class Task 
 {
     private:
         int id;
-        std::string title;
+        string title;
         bool isCompleted;
 
     public:
-        Task(int taskId, const std::string& taskTitle) 
+        Task(int taskId, const string& taskTitle) 
         {
             id = taskId;
             title = taskTitle;
@@ -28,14 +30,14 @@ class Task
 
     void display() const 
     {
-        std::cout << "[" << (isCompleted ? "F" : "T") << "] " << id << ". " << title << "\n";
+        cout << "[" << (isCompleted ? "F" : "T") << "] " << id << ". " << title << "\n";
     }
 };
 
 class TaskList 
 {
     private:
-        std::vector<Task> tasks; 
+        vector<Task> tasks; 
         int nextId;
 
     public:
@@ -44,12 +46,12 @@ class TaskList
             nextId = 1;
         }
 
-    void addTask(const std::string& title) 
+    void addTask(const string& title) 
     {
         Task newTask(nextId, title);
         tasks.push_back(newTask);
         nextId++;
-        std::cout << "Task added successfully!\n";
+        cout << "Task added successfully!\n";
     }
 
     void completeTask(int id) 
@@ -59,27 +61,27 @@ class TaskList
             if (task.getId() == id) 
             {
                 task.markCompleted();
-                std::cout << "Task #" << id << " marked as done!\n";
+                cout << "Task #" << id << " marked as done!\n";
                 return;
             }
         }
-        std::cout << "Error: Task #" << id << " not found.\n";
+        cout << "Error: Task #" << id << " not found.\n";
     }
 
     void displayAll() const 
     {
         if (tasks.empty()) 
         {
-            std::cout << "No tasks in the list.\n";
+            cout << "No tasks in the list.\n";
             return;
         }
 
-        std::cout << "\n--- CURRENT TASKS ---\n";
+        cout << "\n--- CURRENT TASKS ---\n";
         for (const auto& task : tasks) 
         {
             task.display();
         }
-        std::cout << "---------------------\n";
+        cout << "---------------------\n";
     }
 };
 

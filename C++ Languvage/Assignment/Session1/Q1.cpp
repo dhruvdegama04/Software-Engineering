@@ -5,25 +5,27 @@
 #include <iostream>
 #include <string>
 
+using namespace std;
+
 const int MAX_TASKS = 5;
-std::string tasks[MAX_TASKS];
+string tasks[MAX_TASKS];
 int taskCount = 0;
 
-void addTask(const std::string& task) {
+void addTask(const string& task) {
     if (taskCount < MAX_TASKS) {
         tasks[taskCount] = task;
         taskCount++;
-        std::cout << "Added task: " << task << std::endl;
+        cout << "Added task: " << task << endl;
     } else {
-        std::cout << "Cannot add \"" << task << "\" - Task list is full!" << std::endl;
+        cout << "Cannot add \"" << task << "\" - Task list is full!" << endl;
     }
 }
 
 void printTasks() {
-    std::cout << "\n--- Current Tasks ---" << std::endl;
+    cout << "\n--- Current Tasks ---" << endl;
     
     for (int i = 0; i < taskCount; i++) {
-        std::cout << (i + 1) << ". " << tasks[i] << std::endl;
+        cout << (i + 1) << ". " << tasks[i] << endl;
     }
 }
 
