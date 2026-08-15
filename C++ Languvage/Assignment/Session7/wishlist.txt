@@ -1,0 +1,3 @@
+sampu,250
+sabu,50
+brush,10
