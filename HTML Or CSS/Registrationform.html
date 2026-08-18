@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-Reg">
+        <h1>Student Registration Form</h1>
+        <form>
+            <table>
+                <tr>
+                    <td class="label">Roll No : </td>
+                    <td class="input-data">
+                        <input type="text" placeholder="Enter Student Roll No" class="full-width">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="label">Student Name : </td>
+                    <td class="input-data-name">
+                        <input type="text" placeholder="First Name"> - 
+                        <input type="text" placeholder="Last Name">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="label">Father's Name : </td>
+                    <td class="input-data">
+                        <input type="text" placeholder="Enter Father's Name" class="full-width">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="label">Date Of Birth : </td>
+                    <td class="input-data-dob">
+                        <input type="text" placeholder="Day" class="dob-input"> - 
+                        <input type="text" placeholder="Month" class="dob-input"> - 
+                        <input type="text" placeholder="Year" class="dob-input-yr">
+                        <span class="dob-hint">(DD-MM-YYYY)</span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="label">Mobile No : </td>
+                    <td class="input-data-mobile">
+                        <input type="text" value="+91" class="country-code"> - 
+                        <input type="text" placeholder="Enter Student Mobile Number" class="mobile-input">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="label">Email : </td>
+                    <td class="input-data">
+                        <input type="email" placeholder="Enter Student Email" class="full-width">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="label">Password : </td>
+                    <td class="input-data">
+                        <input type="password" placeholder="Enter Your Password" class="full-width">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="label">Gender : </td>
+                    <td class="radio-group">
+                        <label><input type="radio" name="Gender">Male</label>
+                        <label><input type="radio" name="Gender">Female</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="label">Department :</td>
+                    <td class="checkbox-group">
+                        <label><input type="checkbox" name="Department" value="CSE">CSE</label>
+                        <label><input type="checkbox" name="Department" value="IT">IT</label>
+                        <label><input type="checkbox" name="Department" value="ECE">ECE</label>
+                        <label><input type="checkbox" name="Department" value="Civil">Civil</label>
+                        <label><input type="checkbox" name="Department" value="Mech">Mech</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="label">Course : </td>
+                    <td class="input-data">
+                        <select class="full-width">
+                            <option>---- Select Choice ----</option>
+                            <option>CPP</option>
+                            <option>Python</option>
+                            <option>JAVA</option>
+                            <option>PHP</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="label">Student Photo : </td>
+                    <td class="input-data"><input type="file"></td>
+                </tr>
+
+                <tr>
+                    <td class="label">City : </td>
+                    <td class="input-data"><input type="text" class="full-width"></td>
+                </tr>
+
+                <tr>
+                    <td class="label">Address : </td>
+                    <td class="input-data">
+                        <textarea class="full-width" rows="4"></textarea>
+                    </td>
+                </tr>
+            </table>
+            <div class="button">
+                <button type="submit" class="Button">Register</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
