@@ -1,0 +1,22 @@
+<!-- 3.Modify your form to use the POST method and, after submitting a test review, 
+ open the DevTools Network tab to preview the POST request data sent by your form.
+ <br><br><em><strong>Hint:</strong> Look for the form submission request and expand the payload/
+ details to see your input values.</em> -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <form action="/submit-review" method="POST">
+  <!-- Your form fields and submit button -->
+  <label for="review">Review:</label>
+  <textarea id="review" name="review"></textarea><br><br>
+  
+  <button type="submit">Submit Review</button>
+</form>
+ </body>
+ </html>

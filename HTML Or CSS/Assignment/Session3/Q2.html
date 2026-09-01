@@ -1,0 +1,44 @@
+<!-- 2.Add HTML5 validation attributes to your review form so that username is required, 
+ rating must be selected, and the review message must be at least 20 characters long.
+ <br><br><em><strong>Hint:</strong> Use required, minlength, 
+ and a default unselectable option for the dropdown.</em> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/submit-review" method="POST">
+  <label for="username">Username:</label>
+  <input 
+    type="text" 
+    id="username" 
+    name="username" 
+    required
+  ><br><br>
+
+  <label for="rating">Rating:</label>
+  <select id="rating" name="rating" required>
+    <option value="" disabled selected hidden>Select a rating</option>
+    <option value="1">1 - Poor</option>
+    <option value="2">2 - Fair</option>
+    <option value="3">3 - Average</option>
+    <option value="4">4 - Good</option>
+    <option value="5">5 - Excellent</option>
+  </select><br><br>
+
+  <label for="review">Review Message:</label>
+  <textarea 
+    id="review" 
+    name="review" 
+    minlength="20" 
+    required
+  ></textarea><br><br>
+
+  <button type="submit">Submit Review</button>
+</form>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!-- 1.Open Instagram's home page in Chrome, right-click on a post image, and use Inspect Element 
+to find the exact HTML tag and CSS class used for the image container. Write down the tag name and class. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Image's</title>
+    <style>
+        body{
+            display: flex;
+            background-color: burlywood;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+            width: 95%;
+
+        }
+        .post
+        {
+            background-color: aliceblue;
+            border: 2px solid black;
+            border-radius: 2px;
+        }
+        .aavg
+        {
+            width: 500px;
+            position: relative;
+            padding-top: 105%;
+            overflow: hidden;
+        }
+        .aavg img
+        {
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="post">
+        <div class="aavg">
+            <img src="image/instalogo.jpg.jpg" alt="Instagram Logo Image">
+        </div>
+    </div>   
+    </div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!-- 3.Build a Flipkart-style product page section with semantic tags: use <header> 
+for the product title and image, <nav> for category breadcrumbs, 
+<article> for product details and description, and <footer> for offers or warranty info.
+<br><br><em><strong>Hint:</strong> Focus on the correct use of tags for structure, 
+not just visual layout.</em> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipkart Style Product Page</title>
+</head>
+<body>
+
+    <nav aria-label="Breadcrumb">
+        <ol>
+            <li><a href="#electronics">Electronics</a></li>
+            <li><a href="#mobiles">Mobiles</a></li>
+            <li><a href="#smartphones">Smartphones</a></li>
+            <li><span>Flagship Pro 5G</span></li>
+        </ol>
+    </nav>
+
+    <main>
+        <article class="product-container">
+            <header>
+                <figure>
+                    <img style="height: 100px; width: 100px;" src="/image/phone.jpeg" alt="Flagship Pro 5G in Ocean Blue">
+                </figure>
+                <h1>Flagship Pro 5G (Ocean Blue, 256 GB)</h1>
+            </header>
+
+            <section class="product-details">
+                <div class="price-section">
+                    <p class="current-price">₹49,999</p>
+                    <p class="original-price"><del>₹59,999</del></p>
+                    <p class="discount">16% off</p>
+                </div>
+
+                <div class="highlights">
+                    <h2>Key Features</h2>
+                    <ul>
+                        <li>8 GB RAM | 256 GB ROM</li>
+                        <li>16.94 cm (6.67 inch) Full HD+ Display</li>
+                        <li>50MP + 12MP | 32MP Front Camera</li>
+                        <li>5000 mAh Battery</li>
+                    </ul>
+                </div>
+
+                <div class="description">
+                    <h2>Product Description</h2>
+                    <p>Experience ultra-fast performance and seamless multitasking with the Flagship Pro 5G, powered by the latest octa-core processor and advanced AI camera capabilities.</p>
+                </div>
+            </section>
+
+            <footer>
+                <section class="bank-offers">
+                    <h3>Available Offers</h3>
+                    <ul>
+                        <li><strong>Bank Offer:</strong> 5% Unlimited Cashback on Flipkart Axis Bank Credit Card</li>
+                        <li><strong>Partner Offer:</strong> Sign up for Flipkart Pay Later and get ₹500 Gift Card</li>
+                    </ul>
+                </section>
+
+                <section class="warranty-info">
+                    <h3>Warranty</h3>
+                    <p>1 Year Manufacturer Warranty for Device and 6 Months Manufacturer Warranty for In-Box Accessories.</p>
+                </footer>
+            </footer>
+        </article>
+    </main>
+
+</body>
+</html>

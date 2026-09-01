@@ -1,15 +1,24 @@
-Q1.Write a short paragraph in your own words defining what a 'program' is and give one real-life example from any app you use daily (like Instagram, Zomato, or Paytm).
+Q1.Write a short paragraph in your own words defining what a 'program' is and give one real-life example from any app you use daily 
+(like Instagram, Zomato, or Paytm).
 
--->A program is essentially a structured set of instructions given to a computer to execute a specific task or solve a particular problem. It acts like a digital recipe that guides software on how to behave based on user inputs.
---Real-Life Example (Instagram): When you double-tap a photo on Instagram, a program runs behind the scenes to recognize that specific input, instantly change the heart icon color to red, and increase the post's like count by one on the server.
+-->A program is essentially a structured set of instructions given to a computer to execute a specific task or solve a particular problem. 
+It acts like a digital recipe that guides software on how to behave based on user inputs.
+--Real-Life Example (Instagram): When you double-tap a photo on Instagram, a program runs behind the scenes to recognize that specific input, 
+instantly change the heart icon color to red, and increase the post's like count by one on the server.
 
-Q2.List three popular programming languages you have heard of, and for each, mention whether it is usually compiled, interpreted, or can be both.<br><br><em><strong>Hint:</strong> Think of languages like Java, Python, and JavaScript.</em>
+Q2.List three popular programming languages you have heard of, and for each, mention whether it is usually compiled, interpreted, 
+or can be both.<br><br><em><strong>Hint:</strong> Think of languages like Java, Python, and JavaScript.</em>
 
 -->Python: Primarily an interpreted language. The code is executed line-by-line, which makes it highly flexible and popular for data science and web development.
--->Java: Can be both. Java source code is first compiled into intermediate bytecode, which is then interpreted (or further compiled just-in-time) by the Java Virtual Machine (JVM).
--->C++: A traditionally compiled language. The code is translated directly into machine-readable binary code before running, making it incredibly fast and efficient for systems programming and gaming.
 
-Q3.Draw a flowchart (on paper or using any online tool) for the process of booking a movie ticket on BookMyShow, starting from opening the app to receiving the booking confirmation.
+-->Java: Can be both. Java source code is first compiled into intermediate bytecode, which is then interpreted (or further compiled just-in-time) 
+   by the Java Virtual Machine (JVM).
+   
+-->C++: A traditionally compiled language. The code is translated directly into machine-readable binary code before running, 
+making it incredibly fast and efficient for systems programming and gaming.
+
+Q3.Draw a flowchart (on paper or using any online tool) for the process of booking a movie ticket on BookMyShow, 
+starting from opening the app to receiving the booking confirmation.
 
 -->Since I cannot draw an image directly, here is a clean text-based flowchart map representing the logic you can easily draw on paper:
 

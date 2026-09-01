@@ -1,0 +1,38 @@
+<!-- 4.Given a non-semantic HTML snippet for a movie review (using only <div> and <span>), 
+refactor it to use appropriate semantic tags like <header>, <nav>, <article>, 
+and <footer> for improved accessibility and SEO. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="movie-card">
+    <div class="nav-bar">
+        <span class="nav-item"><a href="/movies">Movies</a></span>
+        <span class="nav-item"><a href="/reviews">Reviews</a></span>
+    </div>
+
+    <div class="header">
+        <span class="title">Inception Review</span>
+        <span class="author">By Jane Doe</span>
+        <span class="date">September 1, 2026</span>
+    </div>
+
+    <div class="content">
+        <span class="rating">Rating: 4.5/5</span>
+        <div class="summary">
+            Christopher Nolan's mind-bending thriller remains a masterclass in visual storytelling and narrative complexity.
+        </div>
+    </div>
+
+    <div class="footer">
+        <span class="tag">Genre: Sci-Fi</span>
+        <span class="copyright">&copy; 2026 Film Critic Hub</span>
+    </div>
+</div>
+</body>
+</html>

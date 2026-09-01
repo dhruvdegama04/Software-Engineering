@@ -1,0 +1,164 @@
+<!-- 4.Build a Zomato-style food order form with inputs for user name, 
+a select dropdown for food item (at least 3 options), quantity (number input), 
+and a textarea for delivery instructions. Ensure all fields are labeled and use required validation. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Order Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f8f8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    .order-card {
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .brand-header {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .brand-header h2 {
+      color: #cb202d; /* Signature Zomato Red */
+      margin: 0 0 5px 0;
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+
+    .brand-header p {
+      color: #696969;
+      margin: 0;
+      font-size: 14px;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: #1c1c1c;
+      font-size: 14px;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid #cfcfcf;
+      border-radius: 6px;
+      font-size: 14px;
+      box-sizing: border-box;
+      transition: border-color 0.2s ease;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      outline: none;
+      border-color: #cb202d;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    .submit-btn {
+      width: 100%;
+      background-color: #cb202d;
+      color: white;
+      border: none;
+      padding: 12px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    .submit-btn:hover {
+      background-color: #b31b27;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="order-card">
+    <div class="brand-header">
+      <h2>zomato</h2>
+      <p>Place your order below</p>
+    </div>
+
+    <form action="#" method="POST">
+      <div class="form-group">
+        <label for="fullName">Full Name</label>
+        <input 
+          type="text" 
+          id="fullName" 
+          name="fullName" 
+          placeholder="Enter your name" 
+          required
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="foodItem">Select Food Item</label>
+        <select id="foodItem" name="foodItem" required>
+          <option value="" disabled selected>Choose an item...</option>
+          <option value="butter_chicken">Butter Chicken with Naan</option>
+          <option value="paneer_tikka">Paneer Tikka Roll</option>
+          <option value="hyderabadi_biryani">Hyderabadi Chicken Biryani</option>
+          <option value="veggie_pizza">Loaded Veggie Pizza</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="quantity">Quantity</label>
+        <input 
+          type="number" 
+          id="quantity" 
+          name="quantity" 
+          min="1" 
+          max="20" 
+          value="1" 
+          required
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="instructions">Delivery Instructions</label>
+        <textarea 
+          id="instructions" 
+          name="instructions" 
+          placeholder="e.g., Leave at the door, call upon arrival, make it extra spicy" 
+          required
+        ></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn">Place Order</button>
+    </form>
+  </div>
+
+</body>
+</html>
