@@ -1,0 +1,130 @@
+<!-- 5.Implement a simple light/dark mode switch for a BookMyShow movie detail page 
+using internal CSS and a toggle button. When the button is clicked, 
+switch between light and dark color themes for the page.<br><br><em><strong>Hint:</strong>
+Use JavaScript to add or remove a 'dark-mode' class on the <body> 
+and define the color themes in CSS.</em> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookMyShow - Movie Details</title>
+    
+    <style>
+        /* Base Light Theme (Default) */
+        body {
+            background-color: #f5f5f5;
+            color: #333333;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .toggle-btn {
+            background-color: #f44336; /* BookMyShow Signature Red */
+            color: #ffffff;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+            float: right;
+            transition: background-color 0.2s ease;
+        }
+
+        .book-btn {
+            background-color: #f44336;
+            color: #ffffff;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        .genre {
+            display: inline-block;
+            background-color: #e0e0e0;
+            color: #555555;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            margin-right: 6px;
+        }
+
+        /* Dark Theme Styles applied via .dark-mode class */
+        body.dark-mode {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .card {
+            background-color: #1e1e1e;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        }
+
+        body.dark-mode .genre {
+            background-color: #333333;
+            color: #cccccc;
+        }
+
+        body.dark-mode .toggle-btn {
+            background-color: #ffffff;
+            color: #121212;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <button class="toggle-btn" onclick="toggleTheme()" id="themeBtn">🌙 Dark Mode</button>
+        
+        <h1 style="margin-top: 0;">Oppenheimer</h1>
+        
+        <div>
+            <span class="genre">Biography</span>
+            <span class="genre">Drama</span>
+            <span class="genre">History</span>
+        </div>
+
+        <p style="line-height: 1.6; margin-top: 15px;">
+            The story of American scientist J. Robert Oppenheimer and his role in the development of the atomic bomb during World War II.
+        </p>
+
+        <p><strong>Rating:</strong> ⭐ 8.9/10 (250K+ Votes)</p>
+
+        <button class="book-btn">Book Tickets</button>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            // Toggle the 'dark-mode' class on the body element
+            document.body.classList.toggle('dark-mode');
+
+            // Update button label dynamically based on state
+            const btn = document.getElementById('themeBtn');
+            if (document.body.classList.contains('dark-mode')) {
+                btn.textContent = '☀️ Light Mode';
+            } else {
+                btn.textContent = '🌙 Dark Mode';
+            }
+        }
+    </script>
+
+</body>
+</html>

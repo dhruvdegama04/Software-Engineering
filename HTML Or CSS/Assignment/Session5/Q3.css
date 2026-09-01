@@ -1,0 +1,24 @@
+/* Styling all <button> elements with Zomato-inspired branding */
+button {
+    background-color: #cb202d; /* Zomato Signature Red */
+    color: #ffffff;
+    font-family: 'Okra', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+/* Hover effect to change background color */
+button:hover {
+    background-color: #b01824; /* Darker red shade on hover */
+}
+
+/* Optional active click state */
+button:active {
+    transform: scale(0.98);
+}

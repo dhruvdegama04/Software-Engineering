@@ -1,0 +1,46 @@
+<!-- 4.Write CSS selectors to style all elements with the class 'playlist-item' 
+(for a Spotify playlist page) to have a dark background and white text. 
+Then, add a rule to highlight the currently playing song with a different 
+color using a unique id selector. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Playlist</title>
+    <link rel="stylesheet" href="Q4.css">
+</head>
+<body style="background-color: #000000; padding: 40px; max-width: 500px; margin: 0 auto;">
+
+    <h2 style="color: #ffffff; font-family: sans-serif; margin-bottom: 20px;">My Playlist</h2>
+
+    <!-- Regular Track -->
+    <div class="playlist-item">
+        <div>
+            <div>Starboy</div>
+            <div class="song-artist" style="font-size: 14px;">The Weeknd</div>
+        </div>
+        <span>3:50</span>
+    </div>
+
+    <!-- Currently Playing Track (uses the unique ID) -->
+    <div class="playlist-item" id="currently-playing">
+        <div>
+            <div>Blinding Lights &#9654;</div>
+            <div class="song-artist" style="font-size: 14px;">The Weeknd</div>
+        </div>
+        <span>3:20</span>
+    </div>
+
+    <!-- Regular Track -->
+    <div class="playlist-item">
+        <div>
+            <div>As It Was</div>
+            <div class="song-artist" style="font-size: 14px;">Harry Styles</div>
+        </div>
+        <span>2:47</span>
+    </div>
+
+</body>
+</html>

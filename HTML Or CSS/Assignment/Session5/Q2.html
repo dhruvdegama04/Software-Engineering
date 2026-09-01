@@ -1,0 +1,94 @@
+<!-- 2.Build a Myntra-like offer banner using internal CSS (inside a <style> tag) to set a custom font family, 
+text color, and background color for the banner text. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myntra Style Offer Banner</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 40px;
+            background-color: #f5f5f6;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Banner Container */
+        .offer-banner {
+            width: 100%;
+            max-width: 800px;
+            background: linear-gradient(135deg, #fff3f8 0%, #ffd6e7 100%);
+            border: 2px dashed #ff3f6c;
+            border-radius: 12px;
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+            box-sizing: border-box;
+        }
+
+        /* Styling the Banner Text elements */
+        .banner-subtitle {
+            font-family: 'Montserrat', sans-serif;
+            color: #535766;
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin: 0 0 8px 0;
+        }
+
+        .banner-title {
+            font-family: 'Montserrat', sans-serif;
+            color: #ff3f6c; /* Myntra Signature Pink */
+            background-color: #ffffff;
+            font-size: 36px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-block;
+            padding: 10px 24px;
+            margin: 10px 0;
+            border-radius: 6px;
+            box-shadow: 0 4px 10px rgba(255, 63, 108, 0.15);
+        }
+
+        .banner-offer {
+            font-family: 'Montserrat', sans-serif;
+            color: #282c3f;
+            font-size: 22px;
+            font-weight: 700;
+            margin: 8px 0 20px 0;
+        }
+
+        .cta-button {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #ff3f6c;
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 12px 32px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="offer-banner">
+        <p class="banner-subtitle">End of Reason Sale</p>
+        <h1 class="banner-title">BIGGEST FASHION FESTIVAL</h1>
+        <p class="banner-offer">50% - 80% OFF ON TOP BRANDS</p>
+        <button class="cta-button">SHOP NOW</button>
+    </div>
+
+</body>
+</html>
