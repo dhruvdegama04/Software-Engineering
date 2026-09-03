@@ -1,0 +1,127 @@
+<!-- 1.Create a Bootstrap layout for a Flipkart-style product card page: 
+ use a container with a row, and display three product cards side by side using 
+ the grid system's columns. -->
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flipkart Style Product Grid</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+  <style>
+    body {
+      background-color: #f1f2f6;
+    }
+    .product-card {
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      cursor: pointer;
+    }
+    .product-card:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+      transform: translateY(-2px);
+    }
+    .wishlist-icon {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      color: #c2c2c2;
+    }
+    .wishlist-icon:hover {
+      color: #ff4343;
+    }
+    .product-img {
+      height: 200px;
+      object-fit: contain;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container my-5">
+    <div class="row g-3">
+      
+      <div class="col-12 col-md-4">
+        <div class="card h-100 border-0 shadow-sm product-card position-relative p-3">
+          <i class="bi bi-heart-fill wishlist-icon"></i>
+          <img src="/image/headphone.jpeg" class="card-img-top product-img py-2" alt="Wireless Headphones">
+          <div class="card-body p-0 pt-2 d-flex flex-column">
+            <span class="text-muted small">Sponsored</span>
+            <h5 class="card-title fs-6 text-truncate mb-1 fw-normal">Wireless Over-Ear Headphones with ANC</h5>
+            
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <span class="badge bg-success"><i class="bi bi-star-fill me-1"></i>4.4</span>
+              <span class="text-muted small fw-semibold">(12,450)</span>
+              <img src="https://via.placeholder.com/60x15?text=Assured" alt="Flipkart Assured" class="ms-auto" style="height: 15px;">
+            </div>
+
+            <div class="mt-auto">
+              <div class="d-flex align-items-baseline gap-2">
+                <span class="fs-5 fw-bold">₹2,999</span>
+                <span class="text-muted text-decoration-line-through small">₹6,999</span>
+                <span class="text-success fw-bold small">57% off</span>
+              </div>
+              <p class="text-success small mb-0 fw-bold">Bank Offer Available</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4">
+        <div class="card h-100 border-0 shadow-sm product-card position-relative p-3">
+          <i class="bi bi-heart-fill wishlist-icon"></i>
+          <img src="/image/watch.jpeg" class="card-img-top product-img py-2" alt="Smartwatch">
+          <div class="card-body p-0 pt-2 d-flex flex-column">
+            <span class="text-muted small">&nbsp;</span>
+            <h5 class="card-title fs-6 text-truncate mb-1 fw-normal">AMOLED Display Smartwatch (Black Strap)</h5>
+            
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <span class="badge bg-success"><i class="bi bi-star-fill me-1"></i>4.2</span>
+              <span class="text-muted small fw-semibold">(8,110)</span>
+              <img src="https://via.placeholder.com/60x15?text=Assured" alt="Flipkart Assured" class="ms-auto" style="height: 15px;">
+            </div>
+
+            <div class="mt-auto">
+              <div class="d-flex align-items-baseline gap-2">
+                <span class="fs-5 fw-bold">₹1,499</span>
+                <span class="text-muted text-decoration-line-through small">₹4,999</span>
+                <span class="text-success fw-bold small">70% off</span>
+              </div>
+              <p class="text-success small mb-0 fw-bold">Hot Deal</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4">
+        <div class="card h-100 border-0 shadow-sm product-card position-relative p-3">
+          <i class="bi bi-heart-fill wishlist-icon"></i>
+          <img src="/image/speaker.jpeg" class="card-img-top product-img py-2" alt="Bluetooth Speaker">
+          <div class="card-body p-0 pt-2 d-flex flex-column">
+            <span class="text-muted small">Sponsored</span>
+            <h5 class="card-title fs-6 text-truncate mb-1 fw-normal">Portable 20W Bluetooth Speaker</h5>
+            
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <span class="badge bg-success"><i class="bi bi-star-fill me-1"></i>4.5</span>
+              <span class="text-muted small fw-semibold">(24,890)</span>
+              <img src="https://via.placeholder.com/60x15?text=Assured" alt="Flipkart Assured" class="ms-auto" style="height: 15px;">
+            </div>
+
+            <div class="mt-auto">
+              <div class="d-flex align-items-baseline gap-2">
+                <span class="fs-5 fw-bold">₹1,999</span>
+                <span class="text-muted text-decoration-line-through small">₹3,499</span>
+                <span class="text-success fw-bold small">42% off</span>
+              </div>
+              <p class="text-success small mb-0 fw-bold">Lowest Price in 30 days</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>

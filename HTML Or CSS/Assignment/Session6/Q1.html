@@ -1,0 +1,167 @@
+<!-- 1.Create an HTML file that displays a Zomato-style restaurant card with a restaurant name, 
+ cuisine type, and rating. Use CSS to add margin, padding, 
+ and a visible border to the card so that each section is clearly separated. -->
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Card</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f8f8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    /* Card Container */
+    .card {
+      width: 320px;
+      background-color: #ffffff;
+      border: 1px solid #e8e8e8;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      margin: 20px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+    }
+
+    /* Restaurant Image Section */
+    .card-image-container {
+      position: relative;
+      height: 180px;
+    }
+
+    .card-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .discount-badge {
+      position: absolute;
+      bottom: 12px;
+      left: 0;
+      background-color: #256fef;
+      color: #ffffff;
+      font-weight: bold;
+      font-size: 12px;
+      padding: 4px 8px;
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px;
+      text-transform: uppercase;
+    }
+
+    /* Card Content Details */
+    .card-details {
+      padding: 14px 16px;
+    }
+
+    .header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 6px;
+    }
+
+    .restaurant-name {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 600;
+      color: #1c1c1c;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    /* Zomato-style Green Rating Badge */
+    .rating-badge {
+      background-color: #24963f;
+      color: #ffffff;
+      font-weight: bold;
+      font-size: 13px;
+      padding: 2px 6px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      gap: 2px;
+    }
+
+    .sub-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 14px;
+      color: #696969;
+      margin-bottom: 12px;
+    }
+
+    .cuisine {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 180px;
+    }
+
+    .price {
+      color: #696969;
+    }
+
+    /* Divider */
+    .card-divider {
+      border: 0;
+      border-top: 1px solid #e8e8e8;
+      margin: 8px 0;
+    }
+
+    /* Footer / Delivery Info */
+    .card-footer {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      color: #828282;
+      margin-top: 8px;
+    }
+
+    .safety-icon {
+      width: 18px;
+      height: 18px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="card-image-container">
+      <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80" alt="Restaurant Food" class="card-image">
+      <div class="discount-badge">50% OFF up to ₹100</div>
+    </div>
+
+    <div class="card-details">
+      <div class="header-row">
+        <h3 class="restaurant-name">The Spice Route</h3>
+        <div class="rating-badge">
+          <span>4.3</span> ★
+        </div>
+      </div>
+
+      <div class="sub-row">
+        <span class="cuisine">North Indian, Mughlai</span>
+        <span class="price">₹350 for one</span>
+      </div>
+
+      <hr class="card-divider">
+
+      <div class="card-footer">
+        <img src="

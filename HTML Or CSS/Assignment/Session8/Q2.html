@@ -1,0 +1,206 @@
+<!-- 2.Add media queries to your product card so that when the screen width is 
+ 600px or less, the card layout switches from horizontal 
+ (image and details side by side) to vertical (image on top, details below). -->
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multi-Breakpoint Product Card</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f4f4f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    /* Base Styles: Screens > 1200px (Extra Large Displays) */
+    .product-card {
+      display: flex;
+      flex-direction: row;
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      max-width: 900px;
+      width: 100%;
+      padding: 32px; /* Desktop Padding */
+    }
+
+    .product-image {
+      width: 40%;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .product-details {
+      width: 60%;
+      padding-left: 32px; /* Desktop inner spacing */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .product-title {
+      font-size: 2rem; /* Desktop Font Size */
+      color: #333;
+      margin-bottom: 12px;
+    }
+
+    .product-description {
+      font-size: 1.1rem; /* Desktop Font Size */
+      color: #666;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .product-price {
+      font-size: 1.5rem; /* Desktop Font Size */
+      font-weight: bold;
+      color: #2a9d8f;
+      margin-bottom: 20px;
+    }
+
+    .buy-btn {
+      background-color: #2a9d8f;
+      color: #ffffff;
+      border: none;
+      padding: 14px 24px; /* Desktop Button Padding */
+      border-radius: 6px;
+      font-size: 1.1rem;
+      cursor: pointer;
+    }
+
+    /* -------------------------------------------------- */
+    /* BREAKPOINT 1: Screens <= 1200px (Laptops & Desktops) */
+    /* -------------------------------------------------- */
+    @media only screen and (max-width: 1200px) {
+      .product-card {
+        padding: 24px;
+      }
+
+      .product-details {
+        padding-left: 24px;
+      }
+
+      .product-title {
+        font-size: 1.75rem;
+      }
+
+      .product-description {
+        font-size: 1rem;
+      }
+
+      .product-price {
+        font-size: 1.35rem;
+      }
+
+      .buy-btn {
+        padding: 12px 20px;
+        font-size: 1rem;
+      }
+    }
+
+    /* -------------------------------------------------- */
+    /* BREAKPOINT 2: Screens <= 900px (Tablets)           */
+    /* -------------------------------------------------- */
+    @media only screen and (max-width: 900px) {
+      .product-card {
+        padding: 16px;
+      }
+
+      .product-details {
+        padding-left: 16px;
+      }
+
+      .product-title {
+        font-size: 1.5rem;
+      }
+
+      .product-description {
+        font-size: 0.95rem;
+      }
+
+      .product-price {
+        font-size: 1.2rem;
+      }
+
+      .buy-btn {
+        padding: 10px 16px;
+        font-size: 0.95rem;
+      }
+    }
+
+    /* -------------------------------------------------- */
+    /* BREAKPOINT 3: Screens <= 600px (Mobile Devices)    */
+    /* -------------------------------------------------- */
+    @media only screen and (max-width: 600px) {
+      .product-card {
+        flex-direction: column; /* Switches layout to vertical */
+        padding: 12px;
+      }
+
+      .product-image,
+      .product-details {
+        width: 100%;
+        padding-left: 0; /* Resets horizontal spacing for vertical stacking */
+      }
+
+      .product-image {
+        height: 200px;
+        margin-bottom: 12px;
+      }
+
+      .product-title {
+        font-size: 1.25rem;
+      }
+
+      .product-description {
+        font-size: 0.875rem;
+        margin-bottom: 12px;
+      }
+
+      .product-price {
+        font-size: 1.1rem;
+        margin-bottom: 12px;
+      }
+
+      .buy-btn {
+        padding: 8px 14px;
+        font-size: 0.875rem;
+        width: 100%; /* Full-width button on small screens */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="product-card">
+    <img 
+      class="product-image" 
+      src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80" 
+      alt="Wireless Headphones"
+    >
+    <div class="product-details">
+      <h2 class="product-title">Wireless Headphones</h2>
+      <p class="product-description">
+        Experience high-quality audio with noise cancellation and up to 30 hours of battery life.
+      </p>
+      <div class="product-price">$199.99</div>
+      <button class="buy-btn">Add to Cart</button>
+    </div>
+  </div>
+
+</body>
+</html>

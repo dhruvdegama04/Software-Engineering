@@ -1,0 +1,52 @@
+<!-- 4.Override the Bootstrap primary button color in your own CSS file to use a 
+custom shade (not the default blue), and apply it to a 'Book Ticket' button on your 
+page.<br><br><em><strong>Hint:</strong> Use the CSS selector 
+.btn-primary in your custom stylesheet and link it after the Bootstrap CSS.</em> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Primary Button - BookMyShow Style</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <style>
+    /* Custom primary color overrides (using a custom BookMyShow Crimson shade) */
+    .btn-primary {
+      background-color: #f84464 !important;
+      border-color: #f84464 !important;
+      color: #ffffff !important;
+    }
+
+    /* Hover and focus states override */
+    .btn-primary:hover, 
+    .btn-primary:focus, 
+    .btn-primary:active {
+      background-color: #d8304f !important;
+      border-color: #d8304f !important;
+      color: #ffffff !important;
+    }
+  </style>
+</head>
+<body class="bg-light d-flex align-items-center min-vh-100">
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-5">
+        <div class="card shadow-sm border-0 rounded-4 p-4 text-center">
+          <h4 class="fw-bold mb-2">Avatar: The Way of Water</h4>
+          <p class="text-muted mb-4">3D • English, Hindi • 3h 12m</p>
+          
+          <a href="#" class="btn btn-primary btn-lg fw-bold rounded-3 py-2 px-4 shadow-sm">
+            Book Ticket
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

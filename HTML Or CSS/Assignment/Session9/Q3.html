@@ -1,0 +1,85 @@
+<!-- 3.Design a BookMyShow-like movie details section using Bootstrap: 
+ place a movie poster image in one column and movie details 
+ (title, genre, rating, and a 'Book Now' button) 
+ in the second column, using the grid system. -->
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BookMyShow Movie Banner</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+  <style>
+    .movie-banner-container {
+      background-color: #1a1a1a;
+      color: #ffffff;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .movie-poster {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .rating-box {
+      background-color: #333333;
+      border-radius: 8px;
+    }
+    .btn-book {
+      background-color: #f84464;
+      color: #ffffff;
+      font-weight: 600;
+      padding: 10px 28px;
+      border: none;
+    }
+    .btn-book:hover {
+      background-color: #d63351;
+      color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container my-5">
+    <div class="movie-banner-container p-4 p-md-5">
+      <div class="row g-4 align-items-center">
+        
+        <div class="col-12 col-md-4 col-lg-3">
+          <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=600&q=80" class="movie-poster img-fluid shadow" alt="Movie Poster">
+        </div>
+
+        <div class="col-12 col-md-8 col-lg-9">
+          <h1 class="fw-bold mb-3 display-6">Interstellar: Beyond Time</h1>
+          
+          <div class="rating-box d-inline-flex align-items-center gap-2 px-3 py-2 mb-3">
+            <i class="bi bi-star-fill text-warning fs-5"></i>
+            <span class="fs-5 fw-bold">9.1/10</span>
+            <span class="text-secondary small">(145.2K Votes)</span>
+          </div>
+
+          <div class="mb-3">
+            <span class="badge bg-light text-dark me-1">2D</span>
+            <span class="badge bg-light text-dark me-1">IMAX 3D</span>
+            <span class="badge bg-light text-dark">English, Hindi</span>
+          </div>
+
+          <p class="text-secondary mb-3">
+            2h 49m &bull; Sci-Fi, Adventure, Drama &bull; UA &bull; 7 Nov, 2014
+          </p>
+
+          <p class="lead text-light mb-4 fs-6">
+            When Earth becomes uninhabitable, a team of ex-NASA pilots embarks on a daring interstellar mission through a wormhole to find a new home for mankind.
+          </p>
+
+          <button class="btn btn-book btn-lg rounded-3">Book tickets</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

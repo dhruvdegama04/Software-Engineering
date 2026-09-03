@@ -1,0 +1,117 @@
+<!-- 2.Design a Flipkart-style product tile with an image, product name, and price. 
+Use different display properties (block, inline-block, none) to control the layout of the product name 
+and price, and hide the price when a specific CSS class is added.<br><br><em><strong>Hint:</strong> 
+Try toggling the class in your HTML to see the effect.</em> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flipkart Product Tile</title>
+  <style>
+    body {
+      font-family: Roboto, Arial, sans-serif;
+      background-color: #f1f3f6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    /* Outer Card Tile Container */
+    .product-tile {
+      width: 200px;
+      background-color: #ffffff;
+      border-radius: 4px;
+      padding: 12px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+      text-align: left;
+      transition: box-shadow 0.2s ease;
+    }
+
+    .product-tile:hover {
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
+    }
+
+    /* Product Image Container */
+    .product-image-container {
+      width: 100%;
+      height: 180px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .product-image {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+
+    /* Product Name: Using display: block so it occupies its own full line */
+    .product-title {
+      display: block; 
+      font-size: 14px;
+      color: #212121;
+      margin: 0 0 6px 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    /* Price Section Container: inline-block elements layout side-by-side */
+    .price-container {
+      display: block;
+      margin-top: 4px;
+    }
+
+    .current-price {
+      display: inline-block;
+      font-size: 16px;
+      font-weight: 600;
+      color: #212121;
+      margin-right: 8px;
+    }
+
+    .original-price {
+      display: inline-block;
+      font-size: 12px;
+      color: #878787;
+      text-decoration: line-through;
+      margin-right: 8px;
+    }
+
+    .discount {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 500;
+      color: #388e3c;
+    }
+
+    /* Toggle Class: Uses display: none to completely hide the price block */
+    .hide-price .price-container {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="product-tile">
+    <div class="product-image-container">
+      <img src="/image/headphone.jpeg" alt="Wireless Headphones" class="product-image">
+    </div>
+    
+    <span class="product-title">Sony WH-1000XM5 Headphones</span>
+
+    <div class="price-container">
+      <span class="current-price">₹26,990</span>
+      <span class="original-price">₹34,990</span>
+      <span class="discount">22% off</span>
+    </div>
+  </div>
+
+</body>
+</html>

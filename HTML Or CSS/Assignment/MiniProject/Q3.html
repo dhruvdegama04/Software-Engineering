@@ -1,0 +1,114 @@
+<!-- 3.
+Style the input form for adding social links so that each input field displays a platform icon (Instagram, LinkedIn, etc.) inside the input box, similar to how Zomato shows icons in their search bar.<br><br><em><strong>Hint:</strong> Use background-image or position an <img> inside the input with CSS.</em> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Social Links Form with Embedded Icons</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f4f6f8;
+      display: flex;
+      justify-content: center;
+      padding: 3rem 1rem;
+    }
+
+    .form-container {
+      background: #ffffff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      width: 100%;
+      max-width: 420px;
+    }
+
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+      color: #333;
+    }
+
+    /* Relative Container Wrapper */
+    .input-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    /* Positioning Icon Inside the Input */
+    .input-wrapper i {
+      position: absolute;
+      left: 14px;
+      font-size: 1.15rem;
+      pointer-events: none; /* Allows user to click "through" the icon onto the input */
+    }
+
+    /* Specific Icon Accent Colors */
+    .input-wrapper .fa-instagram { color: #E4405F; }
+    .input-wrapper .fa-linkedin { color: #0A66C2; }
+    .input-wrapper .fa-github { color: #24292e; }
+
+    /* Input Field Styling */
+    .input-wrapper input {
+      width: 100%;
+      padding: 0.75rem 0.75rem 0.75rem 2.6rem; /* Left padding creates space for icon */
+      font-size: 0.95rem;
+      border: 1.5px solid #dcdfe6;
+      border-radius: 8px;
+      outline: none;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .input-wrapper input:focus {
+      border-color: #0066ff;
+      box-shadow: 0 0 0 3px rgba(0, 102, 255, 0.15);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2 style="margin-top:0; margin-bottom:1.5rem; font-size:1.4rem;">Add Social Profiles</h2>
+
+    <div class="form-group">
+      <label for="instagram">Instagram</label>
+      <div class="input-wrapper">
+        <i class="fa-brands fa-instagram"></i>
+        <input type="text" id="instagram" placeholder="instagram.com/username">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="linkedin">LinkedIn</label>
+      <div class="input-wrapper">
+        <i class="fa-brands fa-linkedin"></i>
+        <input type="text" id="linkedin" placeholder="linkedin.com/in/username">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="github">GitHub</label>
+      <div class="input-wrapper">
+        <i class="fa-brands fa-github"></i>
+        <input type="text" id="github" placeholder="github.com/username">
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

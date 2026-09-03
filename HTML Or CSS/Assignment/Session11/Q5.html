@@ -1,0 +1,89 @@
+<!-- 5.Add a theme switcher button to your page that toggles between a light and 
+dark background using Bootstrap classes, and updates the text color for readability.
+<br><br><em><strong>Hint:</strong> Use JavaScript to toggle 'bg-light'/'bg-dark' and 
+'text-dark'/'text-light' classes on the main container.</em> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Theme Switcher</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    /* Smooth transition for background and text color toggling */
+    body {
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    .card {
+      transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    }
+  </style>
+</head>
+
+<body id="main-body" class="bg-light text-dark min-vh-100 d-flex flex-column justify-content-center">
+
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6 text-center">
+        
+        <button id="theme-toggle-btn" class="btn btn-outline-dark mb-4 px-4 py-2 fw-semibold rounded-pill">
+          <i id="theme-icon" class="bi bi-moon-fill me-2"></i>
+          <span id="theme-text">Switch to Dark Mode</span>
+        </button>
+
+        <div id="content-card" class="card bg-white text-dark shadow-lg border-0 rounded-4 p-4 text-start">
+          <div class="card-body">
+            <h3 class="card-title fw-bold mb-3">Interactive Theme Switcher</h3>
+            <p class="card-text fs-6">
+              This card dynamically toggles between Bootstrap's light and dark utility classes using vanilla JavaScript.
+            </p>
+            <hr class="my-4">
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="small fw-semibold">Status: Theme Active</span>
+              <span class="badge bg-primary px-3 py-2">Bootstrap 5</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const themeToggleBtn = document.getElementById('theme-toggle-btn');
+    const mainBody = document.getElementById('main-body');
+    const contentCard = document.getElementById('content-card');
+    const themeIcon = document.getElementById('theme-icon');
+    const themeText = document.getElementById('theme-text');
+
+    themeToggleBtn.addEventListener('click', () => {
+      // Toggle Body Classes
+      mainBody.classList.toggle('bg-light');
+      mainBody.classList.toggle('bg-dark');
+      mainBody.classList.toggle('text-dark');
+      mainBody.classList.toggle('text-light');
+
+      // Toggle Card Classes for Dark Mode
+      contentCard.classList.toggle('bg-white');
+      contentCard.classList.toggle('bg-secondary');
+      contentCard.classList.toggle('text-dark');
+      contentCard.classList.toggle('text-white');
+
+      // Toggle Button Styles & Icons based on the active mode
+      if (mainBody.classList.contains('bg-dark')) {
+        themeToggleBtn.classList.replace('btn-outline-dark', 'btn-outline-light');
+        themeIcon.classList.replace('bi-moon-fill', 'bi-sun-fill');
+        themeText.textContent = 'Switch to Light Mode';
+      } else {
+        themeToggleBtn.classList.replace('btn-outline-light', 'btn-outline-dark');
+        themeIcon.classList.replace('bi-sun-fill', 'bi-moon-fill');
+        themeText.textContent = 'Switch to Dark Mode';
+      }
+    });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

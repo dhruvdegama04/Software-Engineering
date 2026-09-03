@@ -1,0 +1,85 @@
+<!-- 3.Set up three breakpoints (600px, 900px, 1200px) 
+ for your product card and change the card's font size and padding at each 
+ breakpoint to improve readability on different devices.<br><br><em><strong>Hint:
+ </strong> Use @media only screen and (max-width: ...) in your CSS for each breakpoint.
+</em> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Product Card</title>
+  <style>
+    
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    .product-card {
+      background-color: #ffffff;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      width: 100%;
+      
+      /* Base values */
+      padding: 32px;
+      font-size: 18px;
+    }
+
+    .product-card h2 {
+      margin-top: 0;
+      font-size: 1.5em;
+    }
+
+    .product-card button {
+      background-color: #0066cc;
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1em;
+    }
+
+    @media only screen and (max-width: 1200px) {
+      .product-card {
+        padding: 24px;
+        font-size: 16px;
+      }
+    }
+
+    @media only screen and (max-width: 900px) {
+      .product-card {
+        padding: 18px;
+        font-size: 15px;
+      }
+    }
+
+    @media only screen and (max-width: 600px) {
+      .product-card {
+        padding: 12px;
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="product-card">
+    <h2>Wireless Headphones</h2>
+    <p>High-quality noise-canceling headphones with up to 30 hours of battery life.</p>
+    <p><strong>Price:</strong> $199.99</p>
+    <button>Buy Now</button>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!-- 2.Build a movie review card (like BookMyShow) using Bootstrap typography 
+utilities to style the movie title, rating, and review text with different font 
+weights and sizes. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BookMyShow Style Movie Review Card</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body class="bg-light d-flex align-items-center min-vh-100">
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-5 col-lg-4">
+        
+        <div class="card border-0 shadow-lg overflow-hidden rounded-3">
+          
+          <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Movie Poster" style="height: 260px; object-fit: cover;">
+          
+          <div class="card-body p-4">
+            <h2 class="fs-3 fw-bold text-dark text-uppercase tracking-wide mb-1">Inception</h2>
+            
+            <p class="fs-6 fw-medium text-secondary mb-3">Sci-Fi / Action • English, Hindi</p>
+
+            <div class="d-flex align-items-center bg-light p-2 rounded-2 mb-3">
+              <i class="bi bi-star-fill text-warning fs-5 me-2"></i>
+              <span class="fs-5 fw-bold text-dark me-1">8.8</span>
+              <span class="fs-6 text-muted fw-normal">/ 10</span>
+              <span class="fs-7 text-uppercase fw-semibold text-danger ms-auto">(320K Votes)</span>
+            </div>
+
+            <h3 class="fs-5 fw-semibold text-dark mb-2">Mind-bending masterpiece!</h3>
+
+            <p class="fs-6 fw-normal text-secondary lh-base mb-3">
+              Christopher Nolan delivers a visual spectacle that challenges your perception of reality. Exceptional performances paired with a mesmerizing score.
+            </p>
+
+            <div class="border-top pt-3 text-end">
+              <span class="fs-6 fw-bold text-dark d-block">Reviewed by Alex R.</span>
+              <small class="fs-7 fw-light text-muted">Verified Audience • Today</small>
+            </div>
+          </div>
+
+          <div class="card-footer bg-white border-0 p-3 pt-0">
+            <button class="btn btn-danger w-100 fw-bold fs-6 py-2 rounded-2 text-uppercase">Book Tickets</button>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

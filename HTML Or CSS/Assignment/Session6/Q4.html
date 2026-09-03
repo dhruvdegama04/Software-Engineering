@@ -1,0 +1,139 @@
+<!-- 4.Create a BookMyShow movie poster grid where each poster uses position: relative. 
+Add a 'New' badge to the top-left corner of one poster using position: absolute, 
+so it overlays the image correctly.<br><br><em><strong>Hint:</strong> 
+Use top and left properties with position: absolute inside a relatively positioned parent.</em> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Poster Grid</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: #1a1a1a;
+      color: #ffffff;
+      margin: 0;
+      padding: 40px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    /* Grid Container */
+    .movie-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 24px;
+      max-width: 900px;
+      width: 100%;
+    }
+
+    /* Individual Poster Card with position: relative */
+    .movie-card {
+      position: relative;
+      background-color: #262626;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+      transition: transform 0.2s ease;
+    }
+
+    .movie-card:hover {
+      transform: translateY(-6px);
+    }
+
+    /* Poster Image Container */
+    .poster-container {
+      position: relative;
+      width: 100%;
+      height: 300px;
+    }
+
+    .poster-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* 'New' Badge with position: absolute */
+    .new-badge {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background-color: #e50914;
+      color: #ffffff;
+      font-size: 11px;
+      font-weight: bold;
+      text-transform: uppercase;
+      padding: 4px 8px;
+      border-radius: 4px;
+      letter-spacing: 0.5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+      z-index: 2;
+    }
+
+    /* Movie Information Details */
+    .movie-info {
+      padding: 12px;
+    }
+
+    .movie-title {
+      font-size: 16px;
+      font-weight: 600;
+      margin: 0 0 4px 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .movie-genre {
+      font-size: 13px;
+      color: #b3b3b3;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="movie-grid">
+    <!-- Movie Poster 1 with 'New' Badge -->
+    <div class="movie-card">
+      <div class="poster-container">
+        <!-- position: absolute places this badge relative to the .poster-container -->
+        <span class="new-badge">New</span>
+        <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=500&q=80" alt="Sci-Fi Movie Poster" class="poster-image">
+      </div>
+      <div class="movie-info">
+        <h3 class="movie-title">Interstellar Odyssey</h3>
+        <p class="movie-genre">Sci-Fi / Adventure</p>
+      </div>
+    </div>
+
+    <!-- Movie Poster 2 -->
+    <div class="movie-card">
+      <div class="poster-container">
+        <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=500&q=80" alt="Action Movie Poster" class="poster-image">
+      </div>
+      <div class="movie-info">
+        <h3 class="movie-title">Shadow Hunter</h3>
+        <p class="movie-genre">Action / Thriller</p>
+      </div>
+    </div>
+
+    <!-- Movie Poster 3 -->
+    <div class="movie-card">
+      <div class="poster-container">
+        <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=500&q=80" alt="Drama Movie Poster" class="poster-image">
+      </div>
+      <div class="movie-info">
+        <h3 class="movie-title">The Last Symphony</h3>
+        <p class="movie-genre">Drama / Romance</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

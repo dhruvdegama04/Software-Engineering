@@ -1,0 +1,245 @@
+<!-- 2.
+Design a responsive UI for a personal 'Gamer Tag' bio link page that adapts to both mobile and desktop screens, showing the user's avatar, gaming alias, and buttons linking to their Twitch, Discord, and Steam profiles.<br><br><em><strong>Hint:</strong> Use CSS Flexbox or Grid for layout and media queries for responsiveness.</em> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gamer Tag Bio Link</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <style>
+    /* CSS Variables for Neon Gaming Theme */
+    :root {
+      --bg-color: #0d0e15;
+      --card-bg: rgba(22, 26, 38, 0.85);
+      --text-main: #f0f3f8;
+      --text-muted: #8a93b0;
+      
+      /* Platform Brand Colors */
+      --twitch-color: #9146FF;
+      --discord-color: #5865F2;
+      --steam-color: #171a21;
+      --steam-border: #66c0f4;
+      --accent-glow: #00ffcc;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg-color);
+      background-image: 
+        radial-gradient(circle at 10% 20%, rgba(145, 70, 255, 0.15) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(0, 255, 204, 0.1) 0%, transparent 40%);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1.5rem;
+    }
+
+    /* Main Container Card */
+    .profile-card {
+      background: var(--card-bg);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      width: 100%;
+      max-width: 480px;
+      padding: 2.5rem 2rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      
+      /* Mobile Layout: Stacked Flexbox */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* Avatar Container */
+    .avatar-wrapper {
+      position: relative;
+      width: 110px;
+      height: 110px;
+    }
+
+    .avatar-img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--accent-glow);
+      box-shadow: 0 0 15px rgba(0, 255, 204, 0.4);
+    }
+
+    .status-badge {
+      position: absolute;
+      bottom: 5px;
+      right: 5px;
+      width: 18px;
+      height: 18px;
+      background-color: #23a55a; /* Online Green */
+      border: 3px solid var(--bg-color);
+      border-radius: 50%;
+    }
+
+    /* User Profile Info */
+    .profile-info {
+      text-align: center;
+    }
+
+    .gamer-tag {
+      font-size: 1.75rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      background: linear-gradient(90deg, #fff, var(--text-muted));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .tagline {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-top: 0.3rem;
+    }
+
+    /* Links Section - Flexbox for Mobile */
+    .links-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .btn-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.9rem 1.25rem;
+      border-radius: 12px;
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: all 0.25s ease-in-out;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .btn-link i {
+      font-size: 1.4rem;
+    }
+
+    .link-text {
+      flex-grow: 1;
+      text-align: center;
+    }
+
+    /* Individual Button Styles */
+    .btn-twitch {
+      background-color: var(--twitch-color);
+    }
+    .btn-twitch:hover {
+      box-shadow: 0 0 20px rgba(145, 70, 255, 0.6);
+      transform: translateY(-2px);
+    }
+
+    .btn-discord {
+      background-color: var(--discord-color);
+    }
+    .btn-discord:hover {
+      box-shadow: 0 0 20px rgba(88, 101, 242, 0.6);
+      transform: translateY(-2px);
+    }
+
+    .btn-steam {
+      background-color: var(--steam-color);
+      border: 1px solid var(--steam-border);
+    }
+    .btn-steam:hover {
+      box-shadow: 0 0 20px rgba(102, 192, 244, 0.4);
+      transform: translateY(-2px);
+      background-color: #2a475e;
+    }
+
+    /* Responsive Layout Adaptations for Desktop Screens */
+    @media (min-width: 768px) {
+      .profile-card {
+        max-width: 650px;
+        padding: 3rem;
+        /* Switch to Grid Layout for Desktop Side-by-Side look */
+        display: grid;
+        grid-template-columns: 180px 1fr;
+        grid-template-rows: auto auto;
+        column-gap: 2rem;
+        row-gap: 1.5rem;
+        align-items: center;
+      }
+
+      .avatar-wrapper {
+        grid-column: 1;
+        grid-row: 1 / span 2;
+        width: 150px;
+        height: 150px;
+        justify-self: center;
+      }
+
+      .profile-info {
+        grid-column: 2;
+        grid-row: 1;
+        text-align: left;
+      }
+
+      .links-container {
+        grid-column: 2;
+        grid-row: 2;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <main class="profile-card">
+    
+    <div class="avatar-wrapper">
+      <img src="https://images.unsplash.com/photo-1566492031773-4f4e44671857?auto=format&fit=crop&w=300&q=80" alt="Gamer Avatar" class="avatar-img">
+      <span class="status-badge" title="Online"></span>
+    </div>
+
+    <div class="profile-info">
+      <h1 class="gamer-tag">Vortex_FPS</h1>
+      <p class="tagline">Competitive FPS Player & Tech Enthusiast</p>
+    </div>
+
+    <div class="links-container">
+      <a href="https://twitch.tv" target="_blank" class="btn-link btn-twitch">
+        <i class="fa-brands fa-twitch"></i>
+        <span class="link-text">Watch Live on Twitch</span>
+        <i class="fa-solid fa-chevron-right fs-6" style="font-size: 0.8rem; opacity: 0.6;"></i>
+      </a>
+
+      <a href="https://discord.com" target="_blank" class="btn-link btn-discord">
+        <i class="fa-brands fa-discord"></i>
+        <span class="link-text">Join Discord Community</span>
+        <i class="fa-solid fa-chevron-right" style="font-size: 0.8rem; opacity: 0.6;"></i>
+      </a>
+
+      <a href="https://store.steampowered.com" target="_blank" class="btn-link btn-steam">
+        <i class="fa-brands fa-steam"></i>
+        <span class="link-text">View Steam Profile</span>
+        <i class="fa-solid fa-chevron-right" style="font-size: 0.8rem; opacity: 0.6;"></i>
+      </a>
+    </div>
+
+  </main>
+
+</body>
+</html>

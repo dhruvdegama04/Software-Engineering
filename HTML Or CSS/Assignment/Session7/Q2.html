@@ -1,0 +1,110 @@
+<!-- 2.Build a horizontal playlist bar like Spotify using Flexbox: add 5 song cards with song name and artist, 
+and use align-items to vertically center the text in each card. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spotify Playlist Bar</title>
+  <style>
+    body {
+      background-color: #121212;
+      color: #ffffff;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      margin: 0;
+    }
+
+    /* Horizontal scrollable playlist container */
+    .playlist-bar {
+      display: flex;
+      flex-direction: row;
+      gap: 16px;
+      overflow-x: auto;
+      padding: 10px 0;
+    }
+
+    /* Individual Song Card */
+    .song-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Vertically centers the text content relative to the layout flow */
+      justify-content: center; /* Centers items along the vertical axis of the card */
+      
+      min-width: 140px;
+      padding: 16px;
+      background-color: #181818;
+      border-radius: 8px;
+      text-align: center;
+      transition: background-color 0.2s ease;
+    }
+
+    .song-card:hover {
+      background-color: #282828;
+    }
+
+    /* Album Cover Placeholder */
+    .album-cover {
+      width: 100px;
+      height: 100px;
+      background-color: #333;
+      border-radius: 6px;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #b3b3b3;
+      font-size: 12px;
+    }
+
+    .song-title {
+      font-size: 14px;
+      font-weight: bold;
+      margin: 0 0 4px 0;
+      color: #fff;
+    }
+
+    .artist-name {
+      font-size: 12px;
+      color: #b3b3b3;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="playlist-bar">
+    <div class="song-card">
+      <div class="album-cover">Cover</div>
+      <p class="song-title">Starboy</p>
+      <p class="artist-name">The Weeknd</p>
+    </div>
+
+    <div class="song-card">
+      <div class="album-cover">Cover</div>
+      <p class="song-title">Blinding Lights</p>
+      <p class="artist-name">The Weeknd</p>
+    </div>
+
+    <div class="song-card">
+      <div class="album-cover">Cover</div>
+      <p class="song-title">Levitating</p>
+      <p class="artist-name">Dua Lipa</p>
+    </div>
+
+    <div class="song-card">
+      <div class="album-cover">Cover</div>
+      <p class="song-title">As It Was</p>
+      <p class="artist-name">Harry Styles</p>
+    </div>
+
+    <div class="song-card">
+      <div class="album-cover">Cover</div>
+      <p class="song-title">Sunflower</p>
+      <p class="artist-name">Post Malone</p>
+    </div>
+  </div>
+
+</body>
+</html>

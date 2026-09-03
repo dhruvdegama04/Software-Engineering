@@ -1,0 +1,223 @@
+<!-- 3.Design a Flipkart-style product showcase section with four product 
+ cards in a row using Bootstrap card components, ensuring the layout collapses 
+ to two cards per row on mobile screens.<br><br><em><strong>Hint:</strong> 
+Use Bootstrap's col-md-3 and col-6 classes for responsiveness.</em> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flipkart Style Product Showcase</title>
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  
+  <style>
+    body {
+      background-color: #f1f2f6;
+    }
+
+    .product-card {
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      cursor: pointer;
+    }
+
+    .product-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12) !important;
+    }
+
+    .product-img {
+      height: 180px;
+      object-fit: contain;
+    }
+
+    .product-title {
+      font-size: 14px;
+      font-weight: 500;
+      color: #212121;
+    }
+
+    .rating-badge {
+      background-color: #388e3c;
+      font-size: 12px;
+    }
+
+    .discount-text {
+      color: #388e3c;
+      font-size: 13px;
+    }
+
+    .price-text {
+      font-size: 16px;
+      font-weight: 700;
+      color: #212121;
+    }
+
+    .original-price {
+      font-size: 13px;
+      text-decoration: line-through;
+      color: #878787;
+    }
+  </style>
+</head>
+<body class="py-4">
+
+  <div class="container">
+    <!-- Header Section -->
+    <div class="bg-white p-3 rounded-2 shadow-sm mb-3 d-flex justify-content-between align-items-center">
+      <h4 class="fw-bold mb-0 text-dark fs-5">Best Deals on Electronics</h4>
+      <button class="btn btn-primary fw-semibold px-3 py-1 fs-6">VIEW ALL</button>
+    </div>
+
+    <!-- Responsive Grid Row -->
+    <!-- col-6: 2 cards per row on mobile (extra-small & small) -->
+    <!-- col-md-3: 4 cards per row on medium screens and above -->
+    <div class="row g-2 g-md-3">
+      
+      <!-- Product Card 1 -->
+      <div class="col-6 col-md-3">
+        <div class="card h-100 border-0 rounded-2 shadow-sm product-card p-2 p-md-3">
+          <div class="position-relative text-center">
+            <span class="position-absolute top-0 end-0 text-muted fs-5">
+              <i class="bi bi-heart"></i>
+            </span>
+            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=400&q=80" 
+                 class="card-img-top product-img py-2" 
+                 alt="Wireless Headphones">
+          </div>
+          <div class="card-body p-1 text-start">
+            <h5 class="product-title text-truncate mb-1">Wireless Noise-Canceling Headphones</h5>
+            
+            <div class="d-flex align-items-center gap-2 mb-1">
+              <span class="badge rating-badge text-white px-2 py-1 rounded-1">
+                4.4 <i class="bi bi-star-fill ms-1 fs-7"></i>
+              </span>
+              <span class="text-muted small fs-7">(12,430)</span>
+            </div>
+
+            <div class="d-flex align-items-baseline gap-2">
+              <span class="price-text">₹2,499</span>
+              <span class="original-price">₹4,999</span>
+              <span class="discount-text fw-bold">50% off</span>
+            </div>
+            
+            <span class="badge bg-light text-success border border-success fw-semibold mt-2 fs-7">
+              Free delivery
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Card 2 -->
+      <div class="col-6 col-md-3">
+        <div class="card h-100 border-0 rounded-2 shadow-sm product-card p-2 p-md-3">
+          <div class="position-relative text-center">
+            <span class="position-absolute top-0 end-0 text-muted fs-5">
+              <i class="bi bi-heart"></i>
+            </span>
+            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=400&q=80" 
+                 class="card-img-top product-img py-2" 
+                 alt="Smartwatch">
+          </div>
+          <div class="card-body p-1 text-start">
+            <h5 class="product-title text-truncate mb-1">Fitness Smartwatch with AMOLED Display</h5>
+            
+            <div class="d-flex align-items-center gap-2 mb-1">
+              <span class="badge rating-badge text-white px-2 py-1 rounded-1">
+                4.2 <i class="bi bi-star-fill ms-1 fs-7"></i>
+              </span>
+              <span class="text-muted small fs-7">(8,110)</span>
+            </div>
+
+            <div class="d-flex align-items-baseline gap-2">
+              <span class="price-text">₹1,999</span>
+              <span class="original-price">₹5,999</span>
+              <span class="discount-text fw-bold">66% off</span>
+            </div>
+
+            <span class="badge bg-light text-success border border-success fw-semibold mt-2 fs-7">
+              Bank Offer
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Card 3 -->
+      <div class="col-6 col-md-3">
+        <div class="card h-100 border-0 rounded-2 shadow-sm product-card p-2 p-md-3">
+          <div class="position-relative text-center">
+            <span class="position-absolute top-0 end-0 text-muted fs-5">
+              <i class="bi bi-heart"></i>
+            </span>
+            <img src="https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=400&q=80" 
+                 class="card-img-top product-img py-2" 
+                 alt="Bluetooth Speaker">
+          </div>
+          <div class="card-body p-1 text-start">
+            <h5 class="product-title text-truncate mb-1">Portable Waterproof Bluetooth Speaker</h5>
+            
+            <div class="d-flex align-items-center gap-2 mb-1">
+              <span class="badge rating-badge text-white px-2 py-1 rounded-1">
+                4.5 <i class="bi bi-star-fill ms-1 fs-7"></i>
+              </span>
+              <span class="text-muted small fs-7">(24,900)</span>
+            </div>
+
+            <div class="d-flex align-items-baseline gap-2">
+              <span class="price-text">₹1,299</span>
+              <span class="original-price">₹2,999</span>
+              <span class="discount-text fw-bold">56% off</span>
+            </div>
+
+            <span class="badge bg-light text-success border border-success fw-semibold mt-2 fs-7">
+              Free delivery
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Card 4 -->
+      <div class="col-6 col-md-3">
+        <div class="card h-100 border-0 rounded-2 shadow-sm product-card p-2 p-md-3">
+          <div class="position-relative text-center">
+            <span class="position-absolute top-0 end-0 text-muted fs-5">
+              <i class="bi bi-heart"></i>
+            </span>
+            <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?auto=format&fit=crop&w=400&q=80" 
+                 class="card-img-top product-img py-2" 
+                 alt="Sunglasses">
+          </div>
+          <div class="card-body p-1 text-start">
+            <h5 class="product-title text-truncate mb-1">UV Protected Aviator Sunglasses</h5>
+            
+            <div class="d-flex align-items-center gap-2 mb-1">
+              <span class="badge rating-badge text-white px-2 py-1 rounded-1">
+                4.1 <i class="bi bi-star-fill ms-1 fs-7"></i>
+              </span>
+              <span class="text-muted small fs-7">(5,420)</span>
+            </div>
+
+            <div class="d-flex align-items-baseline gap-2">
+              <span class="price-text">₹799</span>
+              <span class="original-price">₹1,999</span>
+              <span class="discount-text fw-bold">60% off</span>
+            </div>
+
+            <span class="badge bg-light text-success border border-success fw-semibold mt-2 fs-7">
+              Top Selling
+            </span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

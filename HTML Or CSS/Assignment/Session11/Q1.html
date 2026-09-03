@@ -1,0 +1,63 @@
+<!-- 1.Create an HTML page that uses Bootstrap utility classes to add 3 different levels
+of spacing (margin and padding) around a card displaying a Flipkart-style product 
+image and name. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flipkart Product Card - Bootstrap Spacing</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f1f2f6;
+    }
+    .product-img {
+      height: 200px;
+      object-fit: contain;
+    }
+    .product-title {
+      font-size: 14px;
+      font-weight: 500;
+      color: #212121;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container py-4">
+    <div class="row justify-content-center">
+      <div class="col-md-4">
+        
+        <div class="card border-0 shadow-sm m-2 p-2">
+          <img src="https://via.placeholder.com/200" class="card-img-top product-img" alt="Wireless Headphones">
+          <div class="card-body text-center p-1">
+            <h5 class="product-title text-truncate">Level 1 Spacing (m-2, p-2)</h5>
+            <p class="text-success fw-bold mb-0">₹1,299</p>
+          </div>
+        </div>
+
+        <div class="card border-0 shadow-sm m-3 p-3">
+          <img src="https://via.placeholder.com/200" class="card-img-top product-img" alt="Smart Watch">
+          <div class="card-body text-center p-2">
+            <h5 class="product-title text-truncate">Level 2 Spacing (m-3, p-3)</h5>
+            <p class="text-success fw-bold mb-0">₹2,499</p>
+          </div>
+        </div>
+
+        <div class="card border-0 shadow-sm m-4 p-4">
+          <img src="https://via.placeholder.com/200" class="card-img-top product-img" alt="Bluetooth Speaker">
+          <div class="card-body text-center p-3">
+            <h5 class="product-title text-truncate">Level 3 Spacing (m-4, p-4)</h5>
+            <p class="text-success fw-bold mb-0">₹999</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
